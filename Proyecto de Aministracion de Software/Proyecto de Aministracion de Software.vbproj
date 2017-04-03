@@ -84,11 +84,11 @@
     <Compile Include="Form\Empleado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Form1.vb">
+    <Compile Include="Form\InicioSesion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Form\InicioSesion.Designer.vb">
+      <DependentUpon>InicioSesion.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -106,10 +106,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Form\PamtallaPrincipal.Designer.vb">
-      <DependentUpon>PamtallaPrincipal.vb</DependentUpon>
+    <Compile Include="Form\PantallaPrincipal.Designer.vb">
+      <DependentUpon>PantallaPrincipal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\PamtallaPrincipal.vb">
+    <Compile Include="Form\PantallaPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Programas.Designer.vb">
@@ -138,8 +138,8 @@
     <EmbeddedResource Include="Form\Empleado.resx">
       <DependentUpon>Empleado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Form\InicioSesion.resx">
+      <DependentUpon>InicioSesion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -147,8 +147,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\PamtallaPrincipal.resx">
-      <DependentUpon>PamtallaPrincipal.vb</DependentUpon>
+    <EmbeddedResource Include="Form\PantallaPrincipal.resx">
+      <DependentUpon>PantallaPrincipal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Programas.resx">
       <DependentUpon>Programas.vb</DependentUpon>

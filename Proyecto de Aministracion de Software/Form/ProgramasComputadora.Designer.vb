@@ -32,14 +32,14 @@ Partial Class ProgramasComputadora
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtTelefono = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.dtpFechaNacimiento = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.CboPrograma = New System.Windows.Forms.ComboBox()
+        Me.CboComputadora = New System.Windows.Forms.ComboBox()
+        Me.CboEmpleado = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -119,80 +119,56 @@ Partial Class ProgramasComputadora
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(64, 255)
+        Me.Label6.Location = New System.Drawing.Point(63, 255)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(128, 16)
+        Me.Label6.Size = New System.Drawing.Size(130, 16)
         Me.Label6.TabIndex = 69
-        Me.Label6.Text = "Tipo de Licensia "
+        Me.Label6.Text = "Fecha Instalación"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(70, 189)
+        Me.Label2.Location = New System.Drawing.Point(116, 186)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 16)
+        Me.Label2.Size = New System.Drawing.Size(79, 16)
         Me.Label2.TabIndex = 68
-        Me.Label2.Text = "Epleado"
-        '
-        'TxtTelefono
-        '
-        Me.TxtTelefono.Location = New System.Drawing.Point(165, 103)
-        Me.TxtTelefono.Margin = New System.Windows.Forms.Padding(4)
-        Me.TxtTelefono.Name = "TxtTelefono"
-        Me.TxtTelefono.Size = New System.Drawing.Size(223, 20)
-        Me.TxtTelefono.TabIndex = 67
+        Me.Label2.Text = "Empleado"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(61, 107)
+        Me.Label1.Location = New System.Drawing.Point(119, 107)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(76, 16)
         Me.Label1.TabIndex = 66
         Me.Label1.Text = "Programa"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(165, 142)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(223, 20)
-        Me.TextBox1.TabIndex = 73
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(36, 146)
+        Me.Label3.Location = New System.Drawing.Point(94, 146)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(101, 16)
         Me.Label3.TabIndex = 72
         Me.Label3.Text = "Computadora"
         '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(165, 185)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(223, 20)
-        Me.TextBox2.TabIndex = 74
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(343, 255)
+        Me.Label4.Location = New System.Drawing.Point(313, 255)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(128, 16)
+        Me.Label4.Size = New System.Drawing.Size(162, 16)
         Me.Label4.TabIndex = 75
-        Me.Label4.Text = "Tipo de Licensia "
+        Me.Label4.Text = "Fecha de Vencimiento"
         '
         'dtpFechaNacimiento
         '
@@ -205,25 +181,49 @@ Partial Class ProgramasComputadora
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(478, 251)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(482, 251)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(96, 20)
         Me.DateTimePicker1.TabIndex = 77
+        '
+        'CboPrograma
+        '
+        Me.CboPrograma.FormattingEnabled = True
+        Me.CboPrograma.Location = New System.Drawing.Point(203, 106)
+        Me.CboPrograma.Name = "CboPrograma"
+        Me.CboPrograma.Size = New System.Drawing.Size(293, 21)
+        Me.CboPrograma.TabIndex = 78
+        '
+        'CboComputadora
+        '
+        Me.CboComputadora.FormattingEnabled = True
+        Me.CboComputadora.Location = New System.Drawing.Point(203, 145)
+        Me.CboComputadora.Name = "CboComputadora"
+        Me.CboComputadora.Size = New System.Drawing.Size(293, 21)
+        Me.CboComputadora.TabIndex = 79
+        '
+        'CboEmpleado
+        '
+        Me.CboEmpleado.FormattingEnabled = True
+        Me.CboEmpleado.Location = New System.Drawing.Point(202, 185)
+        Me.CboEmpleado.Name = "CboEmpleado"
+        Me.CboEmpleado.Size = New System.Drawing.Size(293, 21)
+        Me.CboEmpleado.TabIndex = 80
         '
         'ProgramasComputadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 433)
+        Me.Controls.Add(Me.CboEmpleado)
+        Me.Controls.Add(Me.CboComputadora)
+        Me.Controls.Add(Me.CboPrograma)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.dtpFechaNacimiento)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TxtTelefono)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PbxAtras)
@@ -253,12 +253,12 @@ Partial Class ProgramasComputadora
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TxtTelefono As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents dtpFechaNacimiento As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents CboPrograma As ComboBox
+    Friend WithEvents CboComputadora As ComboBox
+    Friend WithEvents CboEmpleado As ComboBox
 End Class

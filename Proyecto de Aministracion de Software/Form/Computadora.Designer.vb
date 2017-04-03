@@ -35,13 +35,12 @@ Partial Class Computadora
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TxtTelefono = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TxtDiscoDuro = New System.Windows.Forms.TextBox()
+        Me.ChkDisponible = New System.Windows.Forms.CheckBox()
+        Me.CboModelo = New System.Windows.Forms.ComboBox()
+        Me.CboMemoriaRam = New System.Windows.Forms.ComboBox()
+        Me.CboTarjetaVideo = New System.Windows.Forms.ComboBox()
+        Me.CboUnidadOptica = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -121,7 +120,7 @@ Partial Class Computadora
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(60, 110)
+        Me.Label1.Location = New System.Drawing.Point(98, 110)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 20)
         Me.Label1.TabIndex = 35
@@ -131,17 +130,17 @@ Partial Class Computadora
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(13, 180)
+        Me.Label2.Location = New System.Drawing.Point(9, 180)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(119, 20)
+        Me.Label2.Size = New System.Drawing.Size(161, 20)
         Me.Label2.TabIndex = 36
-        Me.Label2.Text = "Memoria Ram"
+        Me.Label2.Text = "Cap. Memoria Ram"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(28, 253)
+        Me.Label3.Location = New System.Drawing.Point(67, 253)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(98, 20)
         Me.Label3.TabIndex = 37
@@ -167,76 +166,68 @@ Partial Class Computadora
         Me.Label6.TabIndex = 39
         Me.Label6.Text = "Unidad Optica"
         '
-        'Label7
+        'TxtDiscoDuro
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(383, 255)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(93, 20)
-        Me.Label7.TabIndex = 40
-        Me.Label7.Text = "Disponible"
+        Me.TxtDiscoDuro.Location = New System.Drawing.Point(172, 255)
+        Me.TxtDiscoDuro.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtDiscoDuro.Name = "TxtDiscoDuro"
+        Me.TxtDiscoDuro.Size = New System.Drawing.Size(157, 20)
+        Me.TxtDiscoDuro.TabIndex = 43
         '
-        'TxtTelefono
+        'ChkDisponible
         '
-        Me.TxtTelefono.Location = New System.Drawing.Point(146, 110)
-        Me.TxtTelefono.Margin = New System.Windows.Forms.Padding(4)
-        Me.TxtTelefono.Name = "TxtTelefono"
-        Me.TxtTelefono.Size = New System.Drawing.Size(157, 20)
-        Me.TxtTelefono.TabIndex = 41
+        Me.ChkDisponible.AutoSize = True
+        Me.ChkDisponible.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkDisponible.Location = New System.Drawing.Point(482, 249)
+        Me.ChkDisponible.Name = "ChkDisponible"
+        Me.ChkDisponible.Size = New System.Drawing.Size(112, 24)
+        Me.ChkDisponible.TabIndex = 44
+        Me.ChkDisponible.Text = "Disponible"
+        Me.ChkDisponible.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'CboModelo
         '
-        Me.TextBox1.Location = New System.Drawing.Point(146, 184)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox1.TabIndex = 42
+        Me.CboModelo.FormattingEnabled = True
+        Me.CboModelo.Location = New System.Drawing.Point(176, 112)
+        Me.CboModelo.Name = "CboModelo"
+        Me.CboModelo.Size = New System.Drawing.Size(153, 21)
+        Me.CboModelo.TabIndex = 45
         '
-        'TextBox2
+        'CboMemoriaRam
         '
-        Me.TextBox2.Location = New System.Drawing.Point(146, 255)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox2.TabIndex = 43
+        Me.CboMemoriaRam.FormattingEnabled = True
+        Me.CboMemoriaRam.Location = New System.Drawing.Point(176, 182)
+        Me.CboMemoriaRam.Name = "CboMemoriaRam"
+        Me.CboMemoriaRam.Size = New System.Drawing.Size(153, 21)
+        Me.CboMemoriaRam.TabIndex = 46
         '
-        'TextBox3
+        'CboTarjetaVideo
         '
-        Me.TextBox3.Location = New System.Drawing.Point(483, 110)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox3.TabIndex = 44
+        Me.CboTarjetaVideo.FormattingEnabled = True
+        Me.CboTarjetaVideo.Location = New System.Drawing.Point(482, 112)
+        Me.CboTarjetaVideo.Name = "CboTarjetaVideo"
+        Me.CboTarjetaVideo.Size = New System.Drawing.Size(153, 21)
+        Me.CboTarjetaVideo.TabIndex = 47
         '
-        'TextBox4
+        'CboUnidadOptica
         '
-        Me.TextBox4.Location = New System.Drawing.Point(483, 184)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox4.TabIndex = 45
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(483, 253)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox5.TabIndex = 46
+        Me.CboUnidadOptica.FormattingEnabled = True
+        Me.CboUnidadOptica.Location = New System.Drawing.Point(482, 182)
+        Me.CboUnidadOptica.Name = "CboUnidadOptica"
+        Me.CboUnidadOptica.Size = New System.Drawing.Size(153, 21)
+        Me.CboUnidadOptica.TabIndex = 48
         '
         'Computadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 433)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.TxtTelefono)
-        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.CboUnidadOptica)
+        Me.Controls.Add(Me.CboTarjetaVideo)
+        Me.Controls.Add(Me.CboMemoriaRam)
+        Me.Controls.Add(Me.CboModelo)
+        Me.Controls.Add(Me.ChkDisponible)
+        Me.Controls.Add(Me.TxtDiscoDuro)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -273,11 +264,10 @@ Partial Class Computadora
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents TxtTelefono As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TxtDiscoDuro As TextBox
+    Friend WithEvents ChkDisponible As CheckBox
+    Friend WithEvents CboModelo As ComboBox
+    Friend WithEvents CboMemoriaRam As ComboBox
+    Friend WithEvents CboTarjetaVideo As ComboBox
+    Friend WithEvents CboUnidadOptica As ComboBox
 End Class

@@ -115,7 +115,7 @@ Partial Class Programas
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(99, 181)
+        Me.Label2.Location = New System.Drawing.Point(99, 183)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(134, 16)
@@ -146,7 +146,7 @@ Partial Class Programas
         Me.cboProfesion.FormattingEnabled = True
         Me.cboProfesion.Location = New System.Drawing.Point(259, 238)
         Me.cboProfesion.Name = "cboProfesion"
-        Me.cboProfesion.Size = New System.Drawing.Size(223, 21)
+        Me.cboProfesion.Size = New System.Drawing.Size(253, 21)
         Me.cboProfesion.TabIndex = 64
         '
         'Label6
@@ -158,14 +158,14 @@ Partial Class Programas
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(128, 16)
         Me.Label6.TabIndex = 63
-        Me.Label6.Text = "Tipo de Licensia "
+        Me.Label6.Text = "Tipo de Licencia "
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(259, 176)
+        Me.ComboBox1.Location = New System.Drawing.Point(259, 178)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(223, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(253, 21)
         Me.ComboBox1.TabIndex = 65
         '
         'Programas
