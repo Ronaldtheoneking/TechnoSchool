@@ -25,4 +25,8 @@ Public Class FrmInicioSesion
             End Try
         End Using
     End Sub
+
+    Private Sub FrmInicioSesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TxtUsuario.Focus()
+    End Sub
 End Class

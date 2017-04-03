@@ -31,9 +31,9 @@ Partial Class FrmInicioSesion
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TxtUsuario = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.TxtContraseña = New System.Windows.Forms.TextBox()
-        Me.TxtUsuario = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -120,6 +120,14 @@ Partial Class FrmInicioSesion
         Me.Panel3.Size = New System.Drawing.Size(240, 34)
         Me.Panel3.TabIndex = 14
         '
+        'TxtUsuario
+        '
+        Me.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtUsuario.Location = New System.Drawing.Point(1, 11)
+        Me.TxtUsuario.Name = "TxtUsuario"
+        Me.TxtUsuario.Size = New System.Drawing.Size(240, 13)
+        Me.TxtUsuario.TabIndex = 17
+        '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight
@@ -137,14 +145,6 @@ Partial Class FrmInicioSesion
         Me.TxtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtContraseña.Size = New System.Drawing.Size(240, 13)
         Me.TxtContraseña.TabIndex = 16
-        '
-        'TxtUsuario
-        '
-        Me.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtUsuario.Location = New System.Drawing.Point(1, 11)
-        Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(240, 13)
-        Me.TxtUsuario.TabIndex = 17
         '
         'FrmInicioSesion
         '

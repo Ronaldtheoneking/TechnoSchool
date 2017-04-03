@@ -35,12 +35,11 @@ Partial Class FrmProgramas
         Me.cboProfesion = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DgvProgramas = New System.Windows.Forms.DataGridView()
+        Me.ListView1 = New System.Windows.Forms.ListView()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.DgvProgramas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox4
@@ -158,20 +157,20 @@ Partial Class FrmProgramas
         Me.ComboBox1.Size = New System.Drawing.Size(253, 21)
         Me.ComboBox1.TabIndex = 65
         '
-        'DgvProgramas
+        'ListView1
         '
-        Me.DgvProgramas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvProgramas.Location = New System.Drawing.Point(6, 286)
-        Me.DgvProgramas.Name = "DgvProgramas"
-        Me.DgvProgramas.Size = New System.Drawing.Size(642, 200)
-        Me.DgvProgramas.TabIndex = 66
+        Me.ListView1.Location = New System.Drawing.Point(6, 292)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(643, 200)
+        Me.ListView1.TabIndex = 66
+        Me.ListView1.UseCompatibleStateImageBehavior = False
         '
         'FrmProgramas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 602)
-        Me.Controls.Add(Me.DgvProgramas)
+        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.cboProfesion)
         Me.Controls.Add(Me.Label6)
@@ -190,7 +189,6 @@ Partial Class FrmProgramas
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DgvProgramas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -208,5 +206,5 @@ Partial Class FrmProgramas
     Friend WithEvents cboProfesion As ComboBox
     Friend WithEvents Label6 As Label
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents DgvProgramas As DataGridView
+    Friend WithEvents ListView1 As ListView
 End Class

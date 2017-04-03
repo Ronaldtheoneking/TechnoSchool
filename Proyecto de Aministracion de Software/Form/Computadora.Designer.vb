@@ -41,7 +41,6 @@ Partial Class FrmComputadora
         Me.CboMemoriaRam = New System.Windows.Forms.ComboBox()
         Me.CboTarjetaVideo = New System.Windows.Forms.ComboBox()
         Me.CboUnidadOptica = New System.Windows.Forms.ComboBox()
-        Me.DgvComputadora = New System.Windows.Forms.DataGridView()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.CboMarca = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -50,11 +49,20 @@ Partial Class FrmComputadora
         Me.CmsComputadora = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LsvComputadoras = New System.Windows.Forms.ListView()
+        Me.ChIdComputadora = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChMarca = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChModelo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChMemoriaRam = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChDiscoDuro = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChTarjetaVideo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChCapacidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChUnidadOptica = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChDisponible = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1.SuspendLayout()
         CType(Me.PbxImprimir, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DgvComputadora, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsComputadora.SuspendLayout()
         Me.SuspendLayout()
@@ -121,7 +129,7 @@ Partial Class FrmComputadora
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(98, 110)
+        Me.Label1.Location = New System.Drawing.Point(98, 164)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 20)
         Me.Label1.TabIndex = 35
@@ -189,7 +197,7 @@ Partial Class FrmComputadora
         'CboModelo
         '
         Me.CboModelo.FormattingEnabled = True
-        Me.CboModelo.Location = New System.Drawing.Point(176, 112)
+        Me.CboModelo.Location = New System.Drawing.Point(176, 166)
         Me.CboModelo.Name = "CboModelo"
         Me.CboModelo.Size = New System.Drawing.Size(153, 21)
         Me.CboModelo.TabIndex = 45
@@ -218,14 +226,6 @@ Partial Class FrmComputadora
         Me.CboUnidadOptica.Size = New System.Drawing.Size(153, 21)
         Me.CboUnidadOptica.TabIndex = 48
         '
-        'DgvComputadora
-        '
-        Me.DgvComputadora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvComputadora.Location = New System.Drawing.Point(7, 305)
-        Me.DgvComputadora.Name = "DgvComputadora"
-        Me.DgvComputadora.Size = New System.Drawing.Size(641, 200)
-        Me.DgvComputadora.TabIndex = 49
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -239,7 +239,7 @@ Partial Class FrmComputadora
         'CboMarca
         '
         Me.CboMarca.FormattingEnabled = True
-        Me.CboMarca.Location = New System.Drawing.Point(176, 168)
+        Me.CboMarca.Location = New System.Drawing.Point(176, 112)
         Me.CboMarca.Name = "CboMarca"
         Me.CboMarca.Size = New System.Drawing.Size(153, 21)
         Me.CboMarca.TabIndex = 52
@@ -248,7 +248,7 @@ Partial Class FrmComputadora
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(98, 166)
+        Me.Label8.Location = New System.Drawing.Point(98, 110)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(58, 20)
         Me.Label8.TabIndex = 53
@@ -276,32 +276,87 @@ Partial Class FrmComputadora
         '
         Me.CmsComputadora.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
         Me.CmsComputadora.Name = "CmsComputadora"
-        Me.CmsComputadora.Size = New System.Drawing.Size(153, 70)
+        Me.CmsComputadora.Size = New System.Drawing.Size(118, 48)
         '
         'EditarToolStripMenuItem
         '
         Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
+        'LsvComputadoras
+        '
+        Me.LsvComputadoras.CheckBoxes = True
+        Me.LsvComputadoras.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdComputadora, Me.ChMarca, Me.ChModelo, Me.ChMemoriaRam, Me.ChDiscoDuro, Me.ChTarjetaVideo, Me.ChCapacidad, Me.ChUnidadOptica, Me.ChDisponible})
+        Me.LsvComputadoras.ContextMenuStrip = Me.CmsComputadora
+        Me.LsvComputadoras.Location = New System.Drawing.Point(7, 304)
+        Me.LsvComputadoras.Name = "LsvComputadoras"
+        Me.LsvComputadoras.Size = New System.Drawing.Size(641, 200)
+        Me.LsvComputadoras.TabIndex = 56
+        Me.LsvComputadoras.UseCompatibleStateImageBehavior = False
+        Me.LsvComputadoras.View = System.Windows.Forms.View.Details
+        '
+        'ChIdComputadora
+        '
+        Me.ChIdComputadora.Text = "Num. Computadora"
+        Me.ChIdComputadora.Width = 113
+        '
+        'ChMarca
+        '
+        Me.ChMarca.Text = "Marca"
+        '
+        'ChModelo
+        '
+        Me.ChModelo.Text = "Modelo"
+        '
+        'ChMemoriaRam
+        '
+        Me.ChMemoriaRam.Text = "Cap. Memoria Ram"
+        Me.ChMemoriaRam.Width = 103
+        '
+        'ChDiscoDuro
+        '
+        Me.ChDiscoDuro.Text = "Cap. Disco Duro"
+        Me.ChDiscoDuro.Width = 97
+        '
+        'ChTarjetaVideo
+        '
+        Me.ChTarjetaVideo.Text = "Tarjeta Video"
+        Me.ChTarjetaVideo.Width = 79
+        '
+        'ChCapacidad
+        '
+        Me.ChCapacidad.Text = "Capacidad"
+        Me.ChCapacidad.Width = 69
+        '
+        'ChUnidadOptica
+        '
+        Me.ChUnidadOptica.Text = "Unidad Optica"
+        Me.ChUnidadOptica.Width = 86
+        '
+        'ChDisponible
+        '
+        Me.ChDisponible.Text = "Disponible"
+        Me.ChDisponible.Width = 67
         '
         'FrmComputadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 602)
+        Me.Controls.Add(Me.LsvComputadoras)
         Me.Controls.Add(Me.CboCapacidad)
         Me.Controls.Add(Me.PbxGuardar)
         Me.Controls.Add(Me.PbxAgregar)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.CboMarca)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.DgvComputadora)
         Me.Controls.Add(Me.CboUnidadOptica)
         Me.Controls.Add(Me.CboTarjetaVideo)
         Me.Controls.Add(Me.CboMemoriaRam)
@@ -324,7 +379,6 @@ Partial Class FrmComputadora
         CType(Me.PbxImprimir, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DgvComputadora, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsComputadora.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -349,7 +403,6 @@ Partial Class FrmComputadora
     Friend WithEvents CboMemoriaRam As ComboBox
     Friend WithEvents CboTarjetaVideo As ComboBox
     Friend WithEvents CboUnidadOptica As ComboBox
-    Friend WithEvents DgvComputadora As DataGridView
     Friend WithEvents Label7 As Label
     Friend WithEvents CboMarca As ComboBox
     Friend WithEvents Label8 As Label
@@ -358,4 +411,14 @@ Partial Class FrmComputadora
     Friend WithEvents CmsComputadora As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LsvComputadoras As ListView
+    Friend WithEvents ChIdComputadora As ColumnHeader
+    Friend WithEvents ChMarca As ColumnHeader
+    Friend WithEvents ChModelo As ColumnHeader
+    Friend WithEvents ChMemoriaRam As ColumnHeader
+    Friend WithEvents ChDiscoDuro As ColumnHeader
+    Friend WithEvents ChTarjetaVideo As ColumnHeader
+    Friend WithEvents ChCapacidad As ColumnHeader
+    Friend WithEvents ChUnidadOptica As ColumnHeader
+    Friend WithEvents ChDisponible As ColumnHeader
 End Class

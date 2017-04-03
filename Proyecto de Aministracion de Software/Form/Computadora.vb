@@ -1,9 +1,9 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class FrmComputadora
-    Dim cmd As New SqlCommand
-    Dim dt As DataTable
-    Dim da As New SqlDataAdapter
+    'Dim cmd As New SqlCommand
+    'Dim dt As DataTable
+    'Dim da As New SqlDataAdapter
 
     Private Sub PbxAtras_Click(sender As Object, e As EventArgs) Handles PbxAtras.Click
         FrmPantallaPrincipal.Show()
@@ -15,8 +15,8 @@ Public Class FrmComputadora
     End Sub
 
     Private Sub PbxAgregar_Click(sender As Object, e As EventArgs) Handles PbxAgregar.Click
-        Call CargarModelo()
         Call CargarMarca()
+        Call CargarModelo()
         Call CargarCapMemoriaRam()
         Call CargarTarjetaVideo()
         Call CargarCapacidad()
@@ -24,10 +24,47 @@ Public Class FrmComputadora
     End Sub
 
     Private Sub CargarDgv()
-        da = New SqlDataAdapter("select * from VistaComputadoras", cn)
-        dt = New DataTable
-        da.Fill(dt)
-        DgvComputadora.DataSource = dt
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
+        Using cmd As New SqlCommand
+
+            Try
+                cn.Open()
+
+                With cmd
+                    .CommandText = "Sp_MostrarComputadoras"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = cn
+
+                End With
+
+                Dim MostrarComputadoras As SqlDataReader
+                MostrarComputadoras = cmd.ExecuteReader
+                LsvComputadoras.Items.Clear()
+
+                While MostrarComputadoras.Read = True
+                    With LsvComputadoras.Items.Add(MostrarComputadoras("IdComputadora").ToString)
+                        .SubItems.Add(MostrarComputadoras("Marca").ToString)
+                        .SubItems.Add(MostrarComputadoras("Modelo").ToString)
+                        .SubItems.Add(MostrarComputadoras("CapacidadMemoria").ToString)
+                        .SubItems.Add(MostrarComputadoras("CapDiscoDuro").ToString)
+                        .SubItems.Add(MostrarComputadoras("TarjetaVideo").ToString)
+                        .SubItems.Add(MostrarComputadoras("Capacidad").ToString)
+                        .SubItems.Add(MostrarComputadoras("UnidadOptica").ToString)
+                        .SubItems.Add(MostrarComputadoras("Disponible").ToString)
+
+
+                    End With
+                End While
+
+            Catch ex As Exception
+                MessageBox.Show("Error al listar las Computadoras" + ex.Message)
+            Finally
+                cn.Close()
+            End Try
+        End Using
     End Sub
 
     Private Sub CargarModelo()
@@ -44,7 +81,7 @@ Public Class FrmComputadora
                 da.Fill(ds, "Modelo")
                 CboModelo.DataSource = ds.Tables(0)
                 CboModelo.DisplayMember = ds.Tables(0).Columns("Modelo").ToString
-                CboModelo.ValueMember = ds.Tables(0).Columns("IdModelo").ToString
+                CboModelo.ValueMember = ds.Tables(0).Columns("IdMarca").ToString
             End Using
         Catch ex As Exception
             MsgBox(ex.Message)

@@ -45,12 +45,11 @@ Partial Class FrmEmpleado
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.cboProfesion = New System.Windows.Forms.ComboBox()
-        Me.DgvEmpleado = New System.Windows.Forms.DataGridView()
+        Me.ListView1 = New System.Windows.Forms.ListView()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox4
@@ -263,20 +262,20 @@ Partial Class FrmEmpleado
         Me.cboProfesion.Size = New System.Drawing.Size(157, 21)
         Me.cboProfesion.TabIndex = 62
         '
-        'DgvEmpleado
+        'ListView1
         '
-        Me.DgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvEmpleado.Location = New System.Drawing.Point(6, 313)
-        Me.DgvEmpleado.Name = "DgvEmpleado"
-        Me.DgvEmpleado.Size = New System.Drawing.Size(643, 200)
-        Me.DgvEmpleado.TabIndex = 63
+        Me.ListView1.Location = New System.Drawing.Point(6, 311)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(643, 200)
+        Me.ListView1.TabIndex = 63
+        Me.ListView1.UseCompatibleStateImageBehavior = False
         '
         'FrmEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 602)
-        Me.Controls.Add(Me.DgvEmpleado)
+        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.cboProfesion)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label7)
@@ -305,7 +304,6 @@ Partial Class FrmEmpleado
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -333,5 +331,5 @@ Partial Class FrmEmpleado
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents cboProfesion As ComboBox
-    Friend WithEvents DgvEmpleado As DataGridView
+    Friend WithEvents ListView1 As ListView
 End Class
