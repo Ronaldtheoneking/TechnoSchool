@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Computadora
+Partial Class FrmComputadora
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,12 +22,13 @@ Partial Class Computadora
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Computadora))
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmComputadora))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PbxImprimir = New System.Windows.Forms.PictureBox()
         Me.PbxAtras = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PbxGuardar = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -41,11 +42,21 @@ Partial Class Computadora
         Me.CboTarjetaVideo = New System.Windows.Forms.ComboBox()
         Me.CboUnidadOptica = New System.Windows.Forms.ComboBox()
         Me.DgvComputadora = New System.Windows.Forms.DataGridView()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.CboMarca = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.PbxAgregar = New System.Windows.Forms.PictureBox()
+        Me.CboCapacidad = New System.Windows.Forms.ComboBox()
+        Me.CmsComputadora = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxImprimir, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvComputadora, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CmsComputadora.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -68,35 +79,35 @@ Partial Class Computadora
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "Computadora"
         '
-        'PictureBox4
+        'PbxImprimir
         '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(300, 520)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(48, 52)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 34
-        Me.PictureBox4.TabStop = False
+        Me.PbxImprimir.Image = CType(resources.GetObject("PbxImprimir.Image"), System.Drawing.Image)
+        Me.PbxImprimir.Location = New System.Drawing.Point(358, 520)
+        Me.PbxImprimir.Name = "PbxImprimir"
+        Me.PbxImprimir.Size = New System.Drawing.Size(48, 52)
+        Me.PbxImprimir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxImprimir.TabIndex = 34
+        Me.PbxImprimir.TabStop = False
         '
         'PbxAtras
         '
         Me.PbxAtras.Image = CType(resources.GetObject("PbxAtras.Image"), System.Drawing.Image)
-        Me.PbxAtras.Location = New System.Drawing.Point(447, 525)
+        Me.PbxAtras.Location = New System.Drawing.Point(505, 525)
         Me.PbxAtras.Name = "PbxAtras"
         Me.PbxAtras.Size = New System.Drawing.Size(43, 47)
         Me.PbxAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxAtras.TabIndex = 33
         Me.PbxAtras.TabStop = False
         '
-        'PictureBox2
+        'PbxGuardar
         '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(148, 522)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(43, 47)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 32
-        Me.PictureBox2.TabStop = False
+        Me.PbxGuardar.Image = CType(resources.GetObject("PbxGuardar.Image"), System.Drawing.Image)
+        Me.PbxGuardar.Location = New System.Drawing.Point(97, 525)
+        Me.PbxGuardar.Name = "PbxGuardar"
+        Me.PbxGuardar.Size = New System.Drawing.Size(43, 47)
+        Me.PbxGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxGuardar.TabIndex = 32
+        Me.PbxGuardar.TabStop = False
         '
         'Panel2
         '
@@ -120,7 +131,7 @@ Partial Class Computadora
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(9, 180)
+        Me.Label2.Location = New System.Drawing.Point(9, 219)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(161, 20)
         Me.Label2.TabIndex = 36
@@ -130,7 +141,7 @@ Partial Class Computadora
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(67, 253)
+        Me.Label3.Location = New System.Drawing.Point(67, 273)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(98, 20)
         Me.Label3.TabIndex = 37
@@ -150,7 +161,7 @@ Partial Class Computadora
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(353, 180)
+        Me.Label6.Location = New System.Drawing.Point(353, 220)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(123, 20)
         Me.Label6.TabIndex = 39
@@ -158,7 +169,7 @@ Partial Class Computadora
         '
         'TxtDiscoDuro
         '
-        Me.TxtDiscoDuro.Location = New System.Drawing.Point(172, 255)
+        Me.TxtDiscoDuro.Location = New System.Drawing.Point(172, 275)
         Me.TxtDiscoDuro.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtDiscoDuro.Name = "TxtDiscoDuro"
         Me.TxtDiscoDuro.Size = New System.Drawing.Size(157, 20)
@@ -168,7 +179,7 @@ Partial Class Computadora
         '
         Me.ChkDisponible.AutoSize = True
         Me.ChkDisponible.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkDisponible.Location = New System.Drawing.Point(482, 249)
+        Me.ChkDisponible.Location = New System.Drawing.Point(482, 274)
         Me.ChkDisponible.Name = "ChkDisponible"
         Me.ChkDisponible.Size = New System.Drawing.Size(112, 24)
         Me.ChkDisponible.TabIndex = 44
@@ -186,7 +197,7 @@ Partial Class Computadora
         'CboMemoriaRam
         '
         Me.CboMemoriaRam.FormattingEnabled = True
-        Me.CboMemoriaRam.Location = New System.Drawing.Point(176, 182)
+        Me.CboMemoriaRam.Location = New System.Drawing.Point(176, 221)
         Me.CboMemoriaRam.Name = "CboMemoriaRam"
         Me.CboMemoriaRam.Size = New System.Drawing.Size(153, 21)
         Me.CboMemoriaRam.TabIndex = 46
@@ -202,7 +213,7 @@ Partial Class Computadora
         'CboUnidadOptica
         '
         Me.CboUnidadOptica.FormattingEnabled = True
-        Me.CboUnidadOptica.Location = New System.Drawing.Point(482, 182)
+        Me.CboUnidadOptica.Location = New System.Drawing.Point(482, 222)
         Me.CboUnidadOptica.Name = "CboUnidadOptica"
         Me.CboUnidadOptica.Size = New System.Drawing.Size(153, 21)
         Me.CboUnidadOptica.TabIndex = 48
@@ -215,11 +226,81 @@ Partial Class Computadora
         Me.DgvComputadora.Size = New System.Drawing.Size(641, 200)
         Me.DgvComputadora.TabIndex = 49
         '
-        'Computadora
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(382, 166)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(94, 20)
+        Me.Label7.TabIndex = 51
+        Me.Label7.Text = "Capacidad"
+        '
+        'CboMarca
+        '
+        Me.CboMarca.FormattingEnabled = True
+        Me.CboMarca.Location = New System.Drawing.Point(176, 168)
+        Me.CboMarca.Name = "CboMarca"
+        Me.CboMarca.Size = New System.Drawing.Size(153, 21)
+        Me.CboMarca.TabIndex = 52
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(98, 166)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(58, 20)
+        Me.Label8.TabIndex = 53
+        Me.Label8.Text = "Marca"
+        '
+        'PbxAgregar
+        '
+        Me.PbxAgregar.Image = CType(resources.GetObject("PbxAgregar.Image"), System.Drawing.Image)
+        Me.PbxAgregar.Location = New System.Drawing.Point(216, 520)
+        Me.PbxAgregar.Name = "PbxAgregar"
+        Me.PbxAgregar.Size = New System.Drawing.Size(48, 52)
+        Me.PbxAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxAgregar.TabIndex = 54
+        Me.PbxAgregar.TabStop = False
+        '
+        'CboCapacidad
+        '
+        Me.CboCapacidad.FormattingEnabled = True
+        Me.CboCapacidad.Location = New System.Drawing.Point(482, 168)
+        Me.CboCapacidad.Name = "CboCapacidad"
+        Me.CboCapacidad.Size = New System.Drawing.Size(153, 21)
+        Me.CboCapacidad.TabIndex = 55
+        '
+        'CmsComputadora
+        '
+        Me.CmsComputadora.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmsComputadora.Name = "CmsComputadora"
+        Me.CmsComputadora.Size = New System.Drawing.Size(153, 70)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
+        'FrmComputadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 602)
+        Me.Controls.Add(Me.CboCapacidad)
+        Me.Controls.Add(Me.PbxGuardar)
+        Me.Controls.Add(Me.PbxAgregar)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.CboMarca)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.DgvComputadora)
         Me.Controls.Add(Me.CboUnidadOptica)
         Me.Controls.Add(Me.CboTarjetaVideo)
@@ -232,19 +313,20 @@ Partial Class Computadora
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.PbxImprimir)
         Me.Controls.Add(Me.PbxAtras)
-        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "Computadora"
+        Me.Name = "FrmComputadora"
         Me.Text = "Computadora"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxImprimir, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvComputadora, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CmsComputadora.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -252,9 +334,9 @@ Partial Class Computadora
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label5 As Label
-    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PbxImprimir As PictureBox
     Friend WithEvents PbxAtras As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PbxGuardar As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -268,4 +350,12 @@ Partial Class Computadora
     Friend WithEvents CboTarjetaVideo As ComboBox
     Friend WithEvents CboUnidadOptica As ComboBox
     Friend WithEvents DgvComputadora As DataGridView
+    Friend WithEvents Label7 As Label
+    Friend WithEvents CboMarca As ComboBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents PbxAgregar As PictureBox
+    Friend WithEvents CboCapacidad As ComboBox
+    Friend WithEvents CmsComputadora As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ProgramasComputadora
+Partial Class FrmProgramasComputadora
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,10 +22,9 @@ Partial Class ProgramasComputadora
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProgramasComputadora))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProgramasComputadora))
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PbxAtras = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -43,7 +42,6 @@ Partial Class ProgramasComputadora
         Me.DgvProgramasComputadora = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.DgvProgramasComputadora, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,7 +50,7 @@ Partial Class ProgramasComputadora
         'PictureBox4
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(377, 521)
+        Me.PictureBox4.Location = New System.Drawing.Point(306, 521)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(48, 52)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -62,27 +60,17 @@ Partial Class ProgramasComputadora
         'PbxAtras
         '
         Me.PbxAtras.Image = CType(resources.GetObject("PbxAtras.Image"), System.Drawing.Image)
-        Me.PbxAtras.Location = New System.Drawing.Point(524, 526)
+        Me.PbxAtras.Location = New System.Drawing.Point(453, 526)
         Me.PbxAtras.Name = "PbxAtras"
         Me.PbxAtras.Size = New System.Drawing.Size(43, 47)
         Me.PbxAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxAtras.TabIndex = 51
         Me.PbxAtras.TabStop = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(75, 521)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(48, 52)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 49
-        Me.PictureBox1.TabStop = False
-        '
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(225, 523)
+        Me.PictureBox2.Location = New System.Drawing.Point(154, 523)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(43, 47)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -220,7 +208,7 @@ Partial Class ProgramasComputadora
         Me.DgvProgramasComputadora.Size = New System.Drawing.Size(642, 200)
         Me.DgvProgramasComputadora.TabIndex = 81
         '
-        'ProgramasComputadora
+        'FrmProgramasComputadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -238,15 +226,13 @@ Partial Class ProgramasComputadora
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PbxAtras)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "ProgramasComputadora"
+        Me.Name = "FrmProgramasComputadora"
         Me.Text = "ProgramasComputadora"
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -258,7 +244,6 @@ Partial Class ProgramasComputadora
 
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PbxAtras As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel

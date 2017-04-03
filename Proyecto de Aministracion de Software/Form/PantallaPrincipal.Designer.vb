@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class PantallaPrincipal
+Partial Class FrmPantallaPrincipal
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,17 +22,19 @@ Partial Class PantallaPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PantallaPrincipal))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPantallaPrincipal))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LblProgramasComputadora = New System.Windows.Forms.Label()
+        Me.LblEmpleado = New System.Windows.Forms.Label()
+        Me.LblProgramas = New System.Windows.Forms.Label()
+        Me.LblComputadoras = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.LblCerrar = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.LblNombreUsuario = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,23 +43,102 @@ Partial Class PantallaPrincipal
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.LblProgramasComputadora)
+        Me.Panel1.Controls.Add(Me.LblEmpleado)
+        Me.Panel1.Controls.Add(Me.LblProgramas)
+        Me.Panel1.Controls.Add(Me.LblComputadoras)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(656, 62)
         Me.Panel1.TabIndex = 13
         '
+        'LblProgramasComputadora
+        '
+        Me.LblProgramasComputadora.AutoSize = True
+        Me.LblProgramasComputadora.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblProgramasComputadora.ForeColor = System.Drawing.Color.White
+        Me.LblProgramasComputadora.Location = New System.Drawing.Point(454, 22)
+        Me.LblProgramasComputadora.Name = "LblProgramasComputadora"
+        Me.LblProgramasComputadora.Size = New System.Drawing.Size(171, 17)
+        Me.LblProgramasComputadora.TabIndex = 19
+        Me.LblProgramasComputadora.Text = "ProgramasComputadoras"
+        '
+        'LblEmpleado
+        '
+        Me.LblEmpleado.AutoSize = True
+        Me.LblEmpleado.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEmpleado.ForeColor = System.Drawing.Color.White
+        Me.LblEmpleado.Location = New System.Drawing.Point(325, 22)
+        Me.LblEmpleado.Name = "LblEmpleado"
+        Me.LblEmpleado.Size = New System.Drawing.Size(72, 17)
+        Me.LblEmpleado.TabIndex = 19
+        Me.LblEmpleado.Text = "Empleado"
+        '
+        'LblProgramas
+        '
+        Me.LblProgramas.AutoSize = True
+        Me.LblProgramas.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblProgramas.ForeColor = System.Drawing.Color.White
+        Me.LblProgramas.Location = New System.Drawing.Point(192, 22)
+        Me.LblProgramas.Name = "LblProgramas"
+        Me.LblProgramas.Size = New System.Drawing.Size(79, 17)
+        Me.LblProgramas.TabIndex = 19
+        Me.LblProgramas.Text = "Programas"
+        '
+        'LblComputadoras
+        '
+        Me.LblComputadoras.AutoSize = True
+        Me.LblComputadoras.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblComputadoras.ForeColor = System.Drawing.Color.White
+        Me.LblComputadoras.Location = New System.Drawing.Point(32, 22)
+        Me.LblComputadoras.Name = "LblComputadoras"
+        Me.LblComputadoras.Size = New System.Drawing.Size(100, 17)
+        Me.LblComputadoras.TabIndex = 18
+        Me.LblComputadoras.Text = "Computadoras"
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Panel2.Controls.Add(Me.LblCerrar)
+        Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Location = New System.Drawing.Point(0, 373)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(656, 62)
         Me.Panel2.TabIndex = 14
+        '
+        'LblCerrar
+        '
+        Me.LblCerrar.AutoSize = True
+        Me.LblCerrar.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCerrar.ForeColor = System.Drawing.Color.White
+        Me.LblCerrar.Location = New System.Drawing.Point(12, 6)
+        Me.LblCerrar.Name = "LblCerrar"
+        Me.LblCerrar.Size = New System.Drawing.Size(97, 17)
+        Me.LblCerrar.TabIndex = 20
+        Me.LblCerrar.Text = "Cerrar Sesion"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Elephant", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(233, 29)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(209, 14)
+        Me.Label1.TabIndex = 21
+        Me.Label1.Text = "Esfuerzo, Sacrificio y Voluntad"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Elephant", 12.0!)
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(247, 6)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(182, 21)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "TECHNO SCHOOL"
         '
         'PictureBox1
         '
@@ -69,16 +150,16 @@ Partial Class PantallaPrincipal
         Me.PictureBox1.TabIndex = 15
         Me.PictureBox1.TabStop = False
         '
-        'Label3
+        'LblNombreUsuario
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Elephant", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(210, 279)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(261, 21)
-        Me.Label3.TabIndex = 16
-        Me.Label3.Text = "Bienvenido Myriam Ordoñez"
+        Me.LblNombreUsuario.AutoSize = True
+        Me.LblNombreUsuario.Font = New System.Drawing.Font("Elephant", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LblNombreUsuario.Location = New System.Drawing.Point(210, 279)
+        Me.LblNombreUsuario.Name = "LblNombreUsuario"
+        Me.LblNombreUsuario.Size = New System.Drawing.Size(261, 21)
+        Me.LblNombreUsuario.TabIndex = 16
+        Me.LblNombreUsuario.Text = "Bienvenido Myriam Ordoñez"
         '
         'DateTimePicker1
         '
@@ -87,73 +168,20 @@ Partial Class PantallaPrincipal
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 17
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(32, 22)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 17)
-        Me.Label1.TabIndex = 18
-        Me.Label1.Text = "Computadoras"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(192, 22)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 17)
-        Me.Label2.TabIndex = 19
-        Me.Label2.Text = "Programas"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(325, 22)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 17)
-        Me.Label4.TabIndex = 19
-        Me.Label4.Text = "Empleado"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(454, 22)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(171, 17)
-        Me.Label5.TabIndex = 19
-        Me.Label5.Text = "ProgramasComputadoras"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(154, 22)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(345, 17)
-        Me.Label6.TabIndex = 20
-        Me.Label6.Text = "TECHNO SCHOOL Esfuerzo, Sacrificio y Voluntad"
-        '
-        'PamtallaPrincipal
+        'FrmPantallaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 433)
         Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.LblNombreUsuario)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "PamtallaPrincipal"
-        Me.Text = "PamtallaPrincipal"
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "FrmPantallaPrincipal"
+        Me.Text = "PantallaPrincipal"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -167,11 +195,13 @@ Partial Class PantallaPrincipal
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents LblProgramasComputadora As Label
+    Friend WithEvents LblEmpleado As Label
+    Friend WithEvents LblProgramas As Label
+    Friend WithEvents LblComputadoras As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents LblNombreUsuario As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label1 As Label
+    Friend WithEvents LblCerrar As Label
 End Class

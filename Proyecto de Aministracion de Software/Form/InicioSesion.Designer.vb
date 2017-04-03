@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class InicioSesion
+Partial Class FrmInicioSesion
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,19 +22,23 @@ Partial Class InicioSesion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InicioSesion))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmInicioSesion))
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.TxtContraseña = New System.Windows.Forms.TextBox()
+        Me.TxtUsuario = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -47,23 +51,6 @@ Partial Class InicioSesion
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Iniciar Sesión"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(84, 286)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(240, 34)
-        Me.TextBox2.TabIndex = 1
-        '
-        'TextBox1
-        '
-        Me.TextBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.TextBox1.Location = New System.Drawing.Point(84, 214)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(240, 34)
-        Me.TextBox1.TabIndex = 0
         '
         'Label4
         '
@@ -124,37 +111,78 @@ Partial Class InicioSesion
         Me.Panel2.Size = New System.Drawing.Size(406, 62)
         Me.Panel2.TabIndex = 13
         '
-        'Form1
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel3.Controls.Add(Me.TxtUsuario)
+        Me.Panel3.Location = New System.Drawing.Point(84, 214)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(240, 34)
+        Me.Panel3.TabIndex = 14
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel4.Controls.Add(Me.TxtContraseña)
+        Me.Panel4.Location = New System.Drawing.Point(84, 286)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(240, 34)
+        Me.Panel4.TabIndex = 15
+        '
+        'TxtContraseña
+        '
+        Me.TxtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtContraseña.Location = New System.Drawing.Point(1, 11)
+        Me.TxtContraseña.Name = "TxtContraseña"
+        Me.TxtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TxtContraseña.Size = New System.Drawing.Size(240, 13)
+        Me.TxtContraseña.TabIndex = 16
+        '
+        'TxtUsuario
+        '
+        Me.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtUsuario.Location = New System.Drawing.Point(1, 11)
+        Me.TxtUsuario.Name = "TxtUsuario"
+        Me.TxtUsuario.Size = New System.Drawing.Size(240, 13)
+        Me.TxtUsuario.TabIndex = 17
+        '
+        'FrmInicioSesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(399, 387)
+        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "FrmInicioSesion"
+        Me.Text = "Inicio Sesion"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents TxtUsuario As TextBox
+    Friend WithEvents TxtContraseña As TextBox
 End Class
