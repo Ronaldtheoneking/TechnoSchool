@@ -40,17 +40,19 @@ Partial Class ProgramasComputadora
         Me.CboPrograma = New System.Windows.Forms.ComboBox()
         Me.CboComputadora = New System.Windows.Forms.ComboBox()
         Me.CboEmpleado = New System.Windows.Forms.ComboBox()
+        Me.DgvProgramasComputadora = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.DgvProgramasComputadora, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox4
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(377, 352)
+        Me.PictureBox4.Location = New System.Drawing.Point(377, 521)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(48, 52)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -60,7 +62,7 @@ Partial Class ProgramasComputadora
         'PbxAtras
         '
         Me.PbxAtras.Image = CType(resources.GetObject("PbxAtras.Image"), System.Drawing.Image)
-        Me.PbxAtras.Location = New System.Drawing.Point(524, 357)
+        Me.PbxAtras.Location = New System.Drawing.Point(524, 526)
         Me.PbxAtras.Name = "PbxAtras"
         Me.PbxAtras.Size = New System.Drawing.Size(43, 47)
         Me.PbxAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -70,7 +72,7 @@ Partial Class ProgramasComputadora
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(75, 352)
+        Me.PictureBox1.Location = New System.Drawing.Point(75, 521)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(48, 52)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -80,7 +82,7 @@ Partial Class ProgramasComputadora
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(225, 354)
+        Me.PictureBox2.Location = New System.Drawing.Point(225, 523)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(43, 47)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -90,7 +92,7 @@ Partial Class ProgramasComputadora
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Panel2.Location = New System.Drawing.Point(-1, 371)
+        Me.Panel2.Location = New System.Drawing.Point(-1, 540)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(656, 62)
         Me.Panel2.TabIndex = 48
@@ -119,7 +121,7 @@ Partial Class ProgramasComputadora
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(63, 255)
+        Me.Label6.Location = New System.Drawing.Point(63, 229)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(130, 16)
@@ -163,7 +165,7 @@ Partial Class ProgramasComputadora
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(313, 255)
+        Me.Label4.Location = New System.Drawing.Point(313, 229)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(162, 16)
@@ -173,7 +175,7 @@ Partial Class ProgramasComputadora
         'dtpFechaNacimiento
         '
         Me.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaNacimiento.Location = New System.Drawing.Point(200, 251)
+        Me.dtpFechaNacimiento.Location = New System.Drawing.Point(200, 225)
         Me.dtpFechaNacimiento.Name = "dtpFechaNacimiento"
         Me.dtpFechaNacimiento.Size = New System.Drawing.Size(96, 20)
         Me.dtpFechaNacimiento.TabIndex = 76
@@ -181,7 +183,7 @@ Partial Class ProgramasComputadora
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(482, 251)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(482, 225)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(96, 20)
         Me.DateTimePicker1.TabIndex = 77
@@ -210,11 +212,20 @@ Partial Class ProgramasComputadora
         Me.CboEmpleado.Size = New System.Drawing.Size(293, 21)
         Me.CboEmpleado.TabIndex = 80
         '
+        'DgvProgramasComputadora
+        '
+        Me.DgvProgramasComputadora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvProgramasComputadora.Location = New System.Drawing.Point(6, 281)
+        Me.DgvProgramasComputadora.Name = "DgvProgramasComputadora"
+        Me.DgvProgramasComputadora.Size = New System.Drawing.Size(642, 200)
+        Me.DgvProgramasComputadora.TabIndex = 81
+        '
         'ProgramasComputadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(655, 433)
+        Me.ClientSize = New System.Drawing.Size(655, 602)
+        Me.Controls.Add(Me.DgvProgramasComputadora)
         Me.Controls.Add(Me.CboEmpleado)
         Me.Controls.Add(Me.CboComputadora)
         Me.Controls.Add(Me.CboPrograma)
@@ -239,6 +250,7 @@ Partial Class ProgramasComputadora
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.DgvProgramasComputadora, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -261,4 +273,5 @@ Partial Class ProgramasComputadora
     Friend WithEvents CboPrograma As ComboBox
     Friend WithEvents CboComputadora As ComboBox
     Friend WithEvents CboEmpleado As ComboBox
+    Friend WithEvents DgvProgramasComputadora As DataGridView
 End Class

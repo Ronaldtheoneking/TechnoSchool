@@ -1,2 +1,17 @@
 C:\Users\Mirian Ordoñez\Desktop\Proyecto de Aministracion de Software\Proyecto de Aministracion de Software\bin\Debug\Proyecto de Aministracion de Software.exe.config
 C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\bin\Debug\Proyecto de Aministracion de Software.exe.config
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\bin\Debug\Proyecto de Aministracion de Software.exe
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\bin\Debug\Proyecto de Aministracion de Software.pdb
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\bin\Debug\Proyecto de Aministracion de Software.xml
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto de Aministracion de Software.vbprojResolveAssemblyReference.cache
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto_de_Aministracion_de_Software.Computadora.resources
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto_de_Aministracion_de_Software.Empleado.resources
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto_de_Aministracion_de_Software.InicioSesion.resources
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto_de_Aministracion_de_Software.Resources.resources
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto_de_Aministracion_de_Software.PantallaPrincipal.resources
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto_de_Aministracion_de_Software.Programas.resources
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto_de_Aministracion_de_Software.ProgramasComputadora.resources
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto de Aministracion de Software.vbproj.GenerateResource.Cache
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto de Aministracion de Software.exe
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto de Aministracion de Software.xml
+C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto de Aministracion de Software.pdb

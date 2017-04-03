@@ -124,12 +124,6 @@
     <Compile Include="Form\ProgramasComputadora.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Reportes.Designer.vb">
-      <DependentUpon>Reportes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Reportes.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form\Computadora.resx">
@@ -155,9 +149,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\ProgramasComputadora.resx">
       <DependentUpon>ProgramasComputadora.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Reportes.resx">
-      <DependentUpon>Reportes.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -36,17 +36,19 @@ Partial Class Programas
         Me.cboProfesion = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.DgvProgramas = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.DgvProgramas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox4
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(377, 352)
+        Me.PictureBox4.Location = New System.Drawing.Point(377, 521)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(48, 52)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -56,7 +58,7 @@ Partial Class Programas
         'PbxAtras
         '
         Me.PbxAtras.Image = CType(resources.GetObject("PbxAtras.Image"), System.Drawing.Image)
-        Me.PbxAtras.Location = New System.Drawing.Point(524, 357)
+        Me.PbxAtras.Location = New System.Drawing.Point(524, 526)
         Me.PbxAtras.Name = "PbxAtras"
         Me.PbxAtras.Size = New System.Drawing.Size(43, 47)
         Me.PbxAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -66,7 +68,7 @@ Partial Class Programas
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(75, 352)
+        Me.PictureBox1.Location = New System.Drawing.Point(75, 521)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(48, 52)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -76,7 +78,7 @@ Partial Class Programas
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(225, 354)
+        Me.PictureBox2.Location = New System.Drawing.Point(225, 523)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(43, 47)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -86,7 +88,7 @@ Partial Class Programas
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Panel2.Location = New System.Drawing.Point(-1, 371)
+        Me.Panel2.Location = New System.Drawing.Point(-1, 540)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(656, 62)
         Me.Panel2.TabIndex = 42
@@ -168,11 +170,20 @@ Partial Class Programas
         Me.ComboBox1.Size = New System.Drawing.Size(253, 21)
         Me.ComboBox1.TabIndex = 65
         '
+        'DgvProgramas
+        '
+        Me.DgvProgramas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvProgramas.Location = New System.Drawing.Point(6, 286)
+        Me.DgvProgramas.Name = "DgvProgramas"
+        Me.DgvProgramas.Size = New System.Drawing.Size(642, 200)
+        Me.DgvProgramas.TabIndex = 66
+        '
         'Programas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(655, 433)
+        Me.ClientSize = New System.Drawing.Size(655, 602)
+        Me.Controls.Add(Me.DgvProgramas)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.cboProfesion)
         Me.Controls.Add(Me.Label6)
@@ -193,6 +204,7 @@ Partial Class Programas
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.DgvProgramas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -211,4 +223,5 @@ Partial Class Programas
     Friend WithEvents cboProfesion As ComboBox
     Friend WithEvents Label6 As Label
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents DgvProgramas As DataGridView
 End Class

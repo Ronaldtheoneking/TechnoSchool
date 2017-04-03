@@ -27,7 +27,6 @@ Partial Class Computadora
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PbxAtras = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -41,11 +40,12 @@ Partial Class Computadora
         Me.CboMemoriaRam = New System.Windows.Forms.ComboBox()
         Me.CboTarjetaVideo = New System.Windows.Forms.ComboBox()
         Me.CboUnidadOptica = New System.Windows.Forms.ComboBox()
+        Me.DgvComputadora = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvComputadora, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -71,7 +71,7 @@ Partial Class Computadora
         'PictureBox4
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(380, 353)
+        Me.PictureBox4.Location = New System.Drawing.Point(300, 520)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(48, 52)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -81,27 +81,17 @@ Partial Class Computadora
         'PbxAtras
         '
         Me.PbxAtras.Image = CType(resources.GetObject("PbxAtras.Image"), System.Drawing.Image)
-        Me.PbxAtras.Location = New System.Drawing.Point(527, 358)
+        Me.PbxAtras.Location = New System.Drawing.Point(447, 525)
         Me.PbxAtras.Name = "PbxAtras"
         Me.PbxAtras.Size = New System.Drawing.Size(43, 47)
         Me.PbxAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxAtras.TabIndex = 33
         Me.PbxAtras.TabStop = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(78, 353)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(48, 52)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 31
-        Me.PictureBox1.TabStop = False
-        '
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(228, 355)
+        Me.PictureBox2.Location = New System.Drawing.Point(148, 522)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(43, 47)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -111,7 +101,7 @@ Partial Class Computadora
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Panel2.Location = New System.Drawing.Point(2, 372)
+        Me.Panel2.Location = New System.Drawing.Point(2, 539)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(656, 62)
         Me.Panel2.TabIndex = 30
@@ -217,11 +207,20 @@ Partial Class Computadora
         Me.CboUnidadOptica.Size = New System.Drawing.Size(153, 21)
         Me.CboUnidadOptica.TabIndex = 48
         '
+        'DgvComputadora
+        '
+        Me.DgvComputadora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvComputadora.Location = New System.Drawing.Point(7, 305)
+        Me.DgvComputadora.Name = "DgvComputadora"
+        Me.DgvComputadora.Size = New System.Drawing.Size(641, 200)
+        Me.DgvComputadora.TabIndex = 49
+        '
         'Computadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(655, 433)
+        Me.ClientSize = New System.Drawing.Size(655, 602)
+        Me.Controls.Add(Me.DgvComputadora)
         Me.Controls.Add(Me.CboUnidadOptica)
         Me.Controls.Add(Me.CboTarjetaVideo)
         Me.Controls.Add(Me.CboMemoriaRam)
@@ -235,7 +234,6 @@ Partial Class Computadora
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PbxAtras)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -245,8 +243,8 @@ Partial Class Computadora
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvComputadora, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -256,7 +254,6 @@ Partial Class Computadora
     Friend WithEvents Label5 As Label
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PbxAtras As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
@@ -270,4 +267,5 @@ Partial Class Computadora
     Friend WithEvents CboMemoriaRam As ComboBox
     Friend WithEvents CboTarjetaVideo As ComboBox
     Friend WithEvents CboUnidadOptica As ComboBox
+    Friend WithEvents DgvComputadora As DataGridView
 End Class
