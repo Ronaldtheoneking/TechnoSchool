@@ -26,7 +26,7 @@ Partial Class FrmComputadora
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmComputadora))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.PbxImprimir = New System.Windows.Forms.PictureBox()
+        Me.PbxEditar = New System.Windows.Forms.PictureBox()
         Me.PbxAtras = New System.Windows.Forms.PictureBox()
         Me.PbxGuardar = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -59,8 +59,10 @@ Partial Class FrmComputadora
         Me.ChCapacidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChUnidadOptica = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChDisponible = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.TxtNumComputadora = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        CType(Me.PbxImprimir, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxEditar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,15 +89,15 @@ Partial Class FrmComputadora
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "Computadora"
         '
-        'PbxImprimir
+        'PbxEditar
         '
-        Me.PbxImprimir.Image = CType(resources.GetObject("PbxImprimir.Image"), System.Drawing.Image)
-        Me.PbxImprimir.Location = New System.Drawing.Point(358, 520)
-        Me.PbxImprimir.Name = "PbxImprimir"
-        Me.PbxImprimir.Size = New System.Drawing.Size(48, 52)
-        Me.PbxImprimir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PbxImprimir.TabIndex = 34
-        Me.PbxImprimir.TabStop = False
+        Me.PbxEditar.Image = CType(resources.GetObject("PbxEditar.Image"), System.Drawing.Image)
+        Me.PbxEditar.Location = New System.Drawing.Point(358, 520)
+        Me.PbxEditar.Name = "PbxEditar"
+        Me.PbxEditar.Size = New System.Drawing.Size(48, 52)
+        Me.PbxEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxEditar.TabIndex = 34
+        Me.PbxEditar.TabStop = False
         '
         'PbxAtras
         '
@@ -177,10 +179,10 @@ Partial Class FrmComputadora
         '
         'TxtDiscoDuro
         '
-        Me.TxtDiscoDuro.Location = New System.Drawing.Point(172, 275)
+        Me.TxtDiscoDuro.Location = New System.Drawing.Point(176, 275)
         Me.TxtDiscoDuro.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtDiscoDuro.Name = "TxtDiscoDuro"
-        Me.TxtDiscoDuro.Size = New System.Drawing.Size(157, 20)
+        Me.TxtDiscoDuro.Size = New System.Drawing.Size(153, 20)
         Me.TxtDiscoDuro.TabIndex = 43
         '
         'ChkDisponible
@@ -345,11 +347,32 @@ Partial Class FrmComputadora
         Me.ChDisponible.Text = "Disponible"
         Me.ChDisponible.Width = 67
         '
+        'TxtNumComputadora
+        '
+        Me.TxtNumComputadora.Enabled = False
+        Me.TxtNumComputadora.Location = New System.Drawing.Point(176, 72)
+        Me.TxtNumComputadora.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtNumComputadora.Name = "TxtNumComputadora"
+        Me.TxtNumComputadora.Size = New System.Drawing.Size(153, 20)
+        Me.TxtNumComputadora.TabIndex = 57
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(6, 70)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(163, 20)
+        Me.Label9.TabIndex = 58
+        Me.Label9.Text = "Num. Computadora"
+        '
         'FrmComputadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 602)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.TxtNumComputadora)
         Me.Controls.Add(Me.LsvComputadoras)
         Me.Controls.Add(Me.CboCapacidad)
         Me.Controls.Add(Me.PbxGuardar)
@@ -368,7 +391,7 @@ Partial Class FrmComputadora
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PbxImprimir)
+        Me.Controls.Add(Me.PbxEditar)
         Me.Controls.Add(Me.PbxAtras)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -376,7 +399,7 @@ Partial Class FrmComputadora
         Me.Text = "Computadora"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PbxImprimir, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxEditar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -388,7 +411,7 @@ Partial Class FrmComputadora
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label5 As Label
-    Friend WithEvents PbxImprimir As PictureBox
+    Friend WithEvents PbxEditar As PictureBox
     Friend WithEvents PbxAtras As PictureBox
     Friend WithEvents PbxGuardar As PictureBox
     Friend WithEvents Panel2 As Panel
@@ -421,4 +444,6 @@ Partial Class FrmComputadora
     Friend WithEvents ChCapacidad As ColumnHeader
     Friend WithEvents ChUnidadOptica As ColumnHeader
     Friend WithEvents ChDisponible As ColumnHeader
+    Friend WithEvents TxtNumComputadora As TextBox
+    Friend WithEvents Label9 As Label
 End Class

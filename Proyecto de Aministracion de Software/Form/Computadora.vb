@@ -1,10 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class FrmComputadora
-    'Dim cmd As New SqlCommand
-    'Dim dt As DataTable
-    'Dim da As New SqlDataAdapter
-
     Private Sub PbxAtras_Click(sender As Object, e As EventArgs) Handles PbxAtras.Click
         FrmPantallaPrincipal.Show()
         Me.Hide()
@@ -15,8 +11,8 @@ Public Class FrmComputadora
     End Sub
 
     Private Sub PbxAgregar_Click(sender As Object, e As EventArgs) Handles PbxAgregar.Click
+
         Call CargarMarca()
-        Call CargarModelo()
         Call CargarCapMemoriaRam()
         Call CargarTarjetaVideo()
         Call CargarCapacidad()
@@ -68,6 +64,10 @@ Public Class FrmComputadora
     End Sub
 
     Private Sub CargarModelo()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
         cn.Open()
         Try
             Using cmd As New SqlCommand
@@ -75,13 +75,15 @@ Public Class FrmComputadora
                     .CommandText = "Sp_MostrarModelo"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = cn
+                    .Parameters.Add("@IdMarca", SqlDbType.Int).Value = CboMarca.SelectedValue
+
                 End With
                 Dim da As New SqlDataAdapter(cmd)
                 Dim ds As New DataSet
                 da.Fill(ds, "Modelo")
                 CboModelo.DataSource = ds.Tables(0)
                 CboModelo.DisplayMember = ds.Tables(0).Columns("Modelo").ToString
-                CboModelo.ValueMember = ds.Tables(0).Columns("IdMarca").ToString
+                CboModelo.ValueMember = ds.Tables(0).Columns("IdModelo").ToString
             End Using
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -91,6 +93,10 @@ Public Class FrmComputadora
     End Sub
 
     Private Sub CargarMarca()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
         cn.Open()
         Try
             Using cmd As New SqlCommand
@@ -106,6 +112,7 @@ Public Class FrmComputadora
                 CboMarca.DisplayMember = ds.Tables(0).Columns("Marca").ToString
                 CboMarca.ValueMember = ds.Tables(0).Columns("IdMarca").ToString
             End Using
+
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
@@ -114,6 +121,10 @@ Public Class FrmComputadora
     End Sub
 
     Private Sub CargarCapMemoriaRam()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
         cn.Open()
         Try
             Using cmd As New SqlCommand
@@ -137,6 +148,10 @@ Public Class FrmComputadora
     End Sub
 
     Private Sub CargarTarjetaVideo()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
         cn.Open()
         Try
             Using cmd As New SqlCommand
@@ -160,6 +175,10 @@ Public Class FrmComputadora
     End Sub
 
     Private Sub CargarCapacidad()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
         cn.Open()
         Try
             Using cmd As New SqlCommand
@@ -183,6 +202,10 @@ Public Class FrmComputadora
     End Sub
 
     Private Sub CargarTipoUnidadOptica()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
         cn.Open()
         Try
             Using cmd As New SqlCommand
@@ -208,16 +231,23 @@ Public Class FrmComputadora
     Private Sub PbxGuardar_Click(sender As Object, e As EventArgs) Handles PbxGuardar.Click
         Call AgregarComputadora()
         Call CargarDgv()
+        Call Limpiar()
     End Sub
 
     Private Sub AgregarComputadora()
-        cn.Open()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
         Try
+            cn.Open()
+
             Using cmd As New SqlCommand
                 With cmd
                     .CommandText = "Sp_AgregarComputadora"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = cn
+
                     .Parameters.Add("@IdModelo", SqlDbType.Int).Value = CboModelo.SelectedValue
                     .Parameters.Add("@IdCapMemoriaRam", SqlDbType.Int).Value = CboMemoriaRam.SelectedValue
                     .Parameters.Add("@CapDiscoDuro", SqlDbType.NVarChar).Value = TxtDiscoDuro.Text
@@ -236,4 +266,105 @@ Public Class FrmComputadora
         End Try
     End Sub
 
+    Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem.Click
+        TxtNumComputadora.Text = LsvComputadoras.FocusedItem.SubItems(0).Text
+        CboMarca.Text = LsvComputadoras.FocusedItem.SubItems(1).Text
+        CboModelo.Text = LsvComputadoras.FocusedItem.SubItems(2).Text
+        CboMemoriaRam.Text = LsvComputadoras.FocusedItem.SubItems(3).Text
+        TxtDiscoDuro.Text = LsvComputadoras.FocusedItem.SubItems(4).Text
+        CboTarjetaVideo.Text = LsvComputadoras.FocusedItem.SubItems(5).Text
+        CboCapacidad.Text = LsvComputadoras.FocusedItem.SubItems(6).Text
+        CboUnidadOptica.Text = LsvComputadoras.FocusedItem.SubItems(7).Text
+    End Sub
+
+    Private Sub EditarComputadora()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
+
+        Try
+            cn.Open()
+
+            Using cmd As New SqlCommand
+                With cmd
+                    .CommandText = "Sp_EditarComputadora"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = cn
+
+                    .Parameters.Add("@IdComputadora", SqlDbType.Int).Value = CInt(TxtNumComputadora.Text)
+                    .Parameters.Add("@IdModelo", SqlDbType.Int).Value = CboModelo.SelectedValue
+                    .Parameters.Add("@IdCapMemoriaRam", SqlDbType.Int).Value = CboMemoriaRam.SelectedValue
+                    .Parameters.Add("@CapDiscoDuro", SqlDbType.NVarChar).Value = TxtDiscoDuro.Text
+                    .Parameters.Add("@IdTarjetaVideo", SqlDbType.Int).Value = CboTarjetaVideo.SelectedValue
+                    .Parameters.Add("@IdTipoUnidadOptica", SqlDbType.Int).Value = CboUnidadOptica.SelectedValue
+                    .Parameters.Add("@Disponible", SqlDbType.Bit).Value = ChkDisponible.CheckState
+
+                    .ExecuteNonQuery()
+                    MsgBox("Informacion de la computadora actualizada con éxito")
+                End With
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            cn.Close()
+        End Try
+    End Sub
+
+    Private Sub Limpiar()
+        CboMarca.Text = ""
+        CboModelo.Text = ""
+        CboMemoriaRam.Text = ""
+        TxtDiscoDuro.Clear()
+        CboTarjetaVideo.Text = ""
+        CboCapacidad.Text = ""
+        CboUnidadOptica.Text = ""
+        ChkDisponible.CheckState = False
+    End Sub
+
+    Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
+        If MessageBox.Show("¿Esta Seguro de eliminar el registro?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            Call EliminarComputadora()
+            Call CargarDgv()
+
+        End If
+    End Sub
+
+    Private Sub EliminarComputadora()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
+
+        Try
+            cn.Open()
+
+            Using cmd As New SqlCommand
+                With cmd
+                    .CommandText = "Sp_EliminarComputadora"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = cn
+
+                    .Parameters.Add("@IdComputadora", SqlDbType.Int).Value = CInt(LsvComputadoras.FocusedItem.SubItems(0).Text)
+
+                    .ExecuteNonQuery()
+                    MsgBox("Registro de Computadora Eliminado con éxito")
+                End With
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            cn.Close()
+        End Try
+    End Sub
+
+    Private Sub PbxEditar_Click(sender As Object, e As EventArgs) Handles PbxEditar.Click
+        Call EditarComputadora()
+        Call CargarDgv()
+        Call Limpiar()
+    End Sub
+
+    Private Sub CboMarca_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles CboMarca.SelectionChangeCommitted
+        Call CargarModelo()
+    End Sub
 End Class
