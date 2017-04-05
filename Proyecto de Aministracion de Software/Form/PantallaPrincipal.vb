@@ -21,7 +21,7 @@
 
     Private Sub LblCerrar_Click(sender As Object, e As EventArgs) Handles LblCerrar.Click
         FrmInicioSesion.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub FrmPantallaPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load

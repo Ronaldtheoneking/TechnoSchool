@@ -47,6 +47,7 @@ Partial Class FrmEmpleado
         Me.Label9 = New System.Windows.Forms.Label()
         Me.CboSexo = New System.Windows.Forms.ComboBox()
         Me.LsvEmpleados = New System.Windows.Forms.ListView()
+        Me.ChIdEmpleado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChNombres = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChApellidos = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -55,19 +56,18 @@ Partial Class FrmEmpleado
         Me.ChDireccion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChTelefono = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChCorreo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChIdEmpleado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.TxtIdEmpleado = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.PbxAgregar = New System.Windows.Forms.PictureBox()
         Me.CmsEmpleado = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TxtIdEmpleado = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.PbxAgregar = New System.Windows.Forms.PictureBox()
         CType(Me.PbxEditar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsEmpleado.SuspendLayout()
+        CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PbxEditar
@@ -155,6 +155,7 @@ Partial Class FrmEmpleado
         Me.TxtContraseña.Location = New System.Drawing.Point(293, 142)
         Me.TxtContraseña.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtContraseña.Name = "TxtContraseña"
+        Me.TxtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtContraseña.Size = New System.Drawing.Size(157, 20)
         Me.TxtContraseña.TabIndex = 44
         '
@@ -294,6 +295,10 @@ Partial Class FrmEmpleado
         Me.LsvEmpleados.UseCompatibleStateImageBehavior = False
         Me.LsvEmpleados.View = System.Windows.Forms.View.Details
         '
+        'ChIdEmpleado
+        '
+        Me.ChIdEmpleado.Text = "IdEmpleado"
+        '
         'ChNombres
         '
         Me.ChNombres.Text = "Nombres"
@@ -330,9 +335,23 @@ Partial Class FrmEmpleado
         Me.ChCorreo.Text = "Correo"
         Me.ChCorreo.Width = 100
         '
-        'ChIdEmpleado
+        'CmsEmpleado
         '
-        Me.ChIdEmpleado.Text = "IdEmpleado"
+        Me.CmsEmpleado.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmsEmpleado.Name = "CmsEmpleado"
+        Me.CmsEmpleado.Size = New System.Drawing.Size(118, 48)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'TxtIdEmpleado
         '
@@ -364,24 +383,6 @@ Partial Class FrmEmpleado
         Me.PbxAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxAgregar.TabIndex = 66
         Me.PbxAgregar.TabStop = False
-        '
-        'CmsEmpleado
-        '
-        Me.CmsEmpleado.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
-        Me.CmsEmpleado.Name = "CmsEmpleado"
-        Me.CmsEmpleado.Size = New System.Drawing.Size(153, 70)
-        '
-        'EditarToolStripMenuItem
-        '
-        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
-        Me.EditarToolStripMenuItem.Text = "Editar"
-        '
-        'EliminarToolStripMenuItem
-        '
-        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'FrmEmpleado
         '
@@ -420,8 +421,8 @@ Partial Class FrmEmpleado
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsEmpleado.ResumeLayout(False)
+        CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

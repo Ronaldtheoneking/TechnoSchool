@@ -14,6 +14,8 @@ Public Class FrmInicioSesion
                         reader.Read()
                         UsuarioActivo.NombreCompleto = String.Format("Bienvenido {0} {1}", reader.GetValue(1), reader.GetValue(2))
                         FrmPantallaPrincipal.Show()
+                        TxtUsuario.Clear()
+                        TxtContraseña.Clear()
                         Me.Hide()
                     Else
                         MsgBox("Usuario y Contrasena invalido")

@@ -55,6 +55,7 @@ Partial Class FrmPantallaPrincipal
         'LblProgramasComputadora
         '
         Me.LblProgramasComputadora.AutoSize = True
+        Me.LblProgramasComputadora.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LblProgramasComputadora.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblProgramasComputadora.ForeColor = System.Drawing.Color.White
         Me.LblProgramasComputadora.Location = New System.Drawing.Point(454, 22)
@@ -66,6 +67,7 @@ Partial Class FrmPantallaPrincipal
         'LblEmpleado
         '
         Me.LblEmpleado.AutoSize = True
+        Me.LblEmpleado.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LblEmpleado.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEmpleado.ForeColor = System.Drawing.Color.White
         Me.LblEmpleado.Location = New System.Drawing.Point(325, 22)
@@ -77,6 +79,7 @@ Partial Class FrmPantallaPrincipal
         'LblProgramas
         '
         Me.LblProgramas.AutoSize = True
+        Me.LblProgramas.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LblProgramas.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblProgramas.ForeColor = System.Drawing.Color.White
         Me.LblProgramas.Location = New System.Drawing.Point(192, 22)
@@ -88,6 +91,7 @@ Partial Class FrmPantallaPrincipal
         'LblComputadoras
         '
         Me.LblComputadoras.AutoSize = True
+        Me.LblComputadoras.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LblComputadoras.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblComputadoras.ForeColor = System.Drawing.Color.White
         Me.LblComputadoras.Location = New System.Drawing.Point(32, 22)
@@ -110,6 +114,7 @@ Partial Class FrmPantallaPrincipal
         'LblCerrar
         '
         Me.LblCerrar.AutoSize = True
+        Me.LblCerrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LblCerrar.Font = New System.Drawing.Font("Elephant", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCerrar.ForeColor = System.Drawing.Color.White
         Me.LblCerrar.Location = New System.Drawing.Point(12, 6)
