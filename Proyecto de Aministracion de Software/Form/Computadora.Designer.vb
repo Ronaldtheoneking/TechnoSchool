@@ -91,6 +91,7 @@ Partial Class FrmComputadora
         '
         'PbxEditar
         '
+        Me.PbxEditar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxEditar.Image = CType(resources.GetObject("PbxEditar.Image"), System.Drawing.Image)
         Me.PbxEditar.Location = New System.Drawing.Point(358, 520)
         Me.PbxEditar.Name = "PbxEditar"
@@ -101,6 +102,7 @@ Partial Class FrmComputadora
         '
         'PbxAtras
         '
+        Me.PbxAtras.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxAtras.Image = CType(resources.GetObject("PbxAtras.Image"), System.Drawing.Image)
         Me.PbxAtras.Location = New System.Drawing.Point(505, 525)
         Me.PbxAtras.Name = "PbxAtras"
@@ -111,6 +113,7 @@ Partial Class FrmComputadora
         '
         'PbxGuardar
         '
+        Me.PbxGuardar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxGuardar.Image = CType(resources.GetObject("PbxGuardar.Image"), System.Drawing.Image)
         Me.PbxGuardar.Location = New System.Drawing.Point(97, 525)
         Me.PbxGuardar.Name = "PbxGuardar"
@@ -258,6 +261,7 @@ Partial Class FrmComputadora
         '
         'PbxAgregar
         '
+        Me.PbxAgregar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxAgregar.Image = CType(resources.GetObject("PbxAgregar.Image"), System.Drawing.Image)
         Me.PbxAgregar.Location = New System.Drawing.Point(216, 520)
         Me.PbxAgregar.Name = "PbxAgregar"

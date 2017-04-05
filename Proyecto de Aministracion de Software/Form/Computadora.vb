@@ -275,6 +275,13 @@ Public Class FrmComputadora
         CboTarjetaVideo.Text = LsvComputadoras.FocusedItem.SubItems(5).Text
         CboCapacidad.Text = LsvComputadoras.FocusedItem.SubItems(6).Text
         CboUnidadOptica.Text = LsvComputadoras.FocusedItem.SubItems(7).Text
+
+        Call CargarMarca()
+        Call CargarCapMemoriaRam()
+        Call CargarTarjetaVideo()
+        Call CargarCapacidad()
+        Call CargarTipoUnidadOptica()
+
     End Sub
 
     Private Sub EditarComputadora()
@@ -367,4 +374,5 @@ Public Class FrmComputadora
     Private Sub CboMarca_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles CboMarca.SelectionChangeCommitted
         Call CargarModelo()
     End Sub
+
 End Class

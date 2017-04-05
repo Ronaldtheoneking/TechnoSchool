@@ -22,65 +22,86 @@ Partial Class FrmEmpleado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEmpleado))
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PbxEditar = New System.Windows.Forms.PictureBox()
         Me.PbxAtras = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PbxGuardar = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TxtTelefono = New System.Windows.Forms.TextBox()
+        Me.TxtUsuario = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TxtContraseña = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TxtApellidos = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TxtCorreo = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TxtTelefono = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TxtDireccion = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.cboProfesion = New System.Windows.Forms.ComboBox()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CboSexo = New System.Windows.Forms.ComboBox()
+        Me.LsvEmpleados = New System.Windows.Forms.ListView()
+        Me.ChNombres = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChApellidos = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChContraseña = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChSexo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChDireccion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChTelefono = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChCorreo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChIdEmpleado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.TxtIdEmpleado = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.PbxAgregar = New System.Windows.Forms.PictureBox()
+        Me.CmsEmpleado = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        CType(Me.PbxEditar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CmsEmpleado.SuspendLayout()
         Me.SuspendLayout()
         '
-        'PictureBox4
+        'PbxEditar
         '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(312, 520)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(48, 52)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 40
-        Me.PictureBox4.TabStop = False
+        Me.PbxEditar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxEditar.Image = CType(resources.GetObject("PbxEditar.Image"), System.Drawing.Image)
+        Me.PbxEditar.Location = New System.Drawing.Point(351, 520)
+        Me.PbxEditar.Name = "PbxEditar"
+        Me.PbxEditar.Size = New System.Drawing.Size(48, 52)
+        Me.PbxEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxEditar.TabIndex = 40
+        Me.PbxEditar.TabStop = False
         '
         'PbxAtras
         '
+        Me.PbxAtras.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxAtras.Image = CType(resources.GetObject("PbxAtras.Image"), System.Drawing.Image)
-        Me.PbxAtras.Location = New System.Drawing.Point(459, 525)
+        Me.PbxAtras.Location = New System.Drawing.Point(498, 525)
         Me.PbxAtras.Name = "PbxAtras"
         Me.PbxAtras.Size = New System.Drawing.Size(43, 47)
         Me.PbxAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxAtras.TabIndex = 39
         Me.PbxAtras.TabStop = False
         '
-        'PictureBox2
+        'PbxGuardar
         '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(160, 522)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(43, 47)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 38
-        Me.PictureBox2.TabStop = False
+        Me.PbxGuardar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxGuardar.Image = CType(resources.GetObject("PbxGuardar.Image"), System.Drawing.Image)
+        Me.PbxGuardar.Location = New System.Drawing.Point(91, 522)
+        Me.PbxGuardar.Name = "PbxGuardar"
+        Me.PbxGuardar.Size = New System.Drawing.Size(43, 47)
+        Me.PbxGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxGuardar.TabIndex = 38
+        Me.PbxGuardar.TabStop = False
         '
         'Panel2
         '
@@ -110,51 +131,51 @@ Partial Class FrmEmpleado
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "Empleado"
         '
-        'TxtTelefono
+        'TxtUsuario
         '
-        Me.TxtTelefono.Location = New System.Drawing.Point(269, 73)
-        Me.TxtTelefono.Margin = New System.Windows.Forms.Padding(4)
-        Me.TxtTelefono.Name = "TxtTelefono"
-        Me.TxtTelefono.Size = New System.Drawing.Size(157, 20)
-        Me.TxtTelefono.TabIndex = 42
+        Me.TxtUsuario.Location = New System.Drawing.Point(293, 107)
+        Me.TxtUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtUsuario.Name = "TxtUsuario"
+        Me.TxtUsuario.Size = New System.Drawing.Size(157, 20)
+        Me.TxtUsuario.TabIndex = 42
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(187, 77)
+        Me.Label1.Location = New System.Drawing.Point(211, 108)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(62, 16)
         Me.Label1.TabIndex = 41
         Me.Label1.Text = "Usuario"
         '
-        'TextBox1
+        'TxtContraseña
         '
-        Me.TextBox1.Location = New System.Drawing.Point(269, 112)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox1.TabIndex = 44
+        Me.TxtContraseña.Location = New System.Drawing.Point(293, 142)
+        Me.TxtContraseña.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtContraseña.Name = "TxtContraseña"
+        Me.TxtContraseña.Size = New System.Drawing.Size(157, 20)
+        Me.TxtContraseña.TabIndex = 44
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(162, 116)
+        Me.Label2.Location = New System.Drawing.Point(186, 146)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(87, 16)
         Me.Label2.TabIndex = 43
         Me.Label2.Text = "Contraseña"
         '
-        'TextBox2
+        'TxtNombre
         '
-        Me.TextBox2.Location = New System.Drawing.Point(136, 178)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox2.TabIndex = 46
+        Me.TxtNombre.Location = New System.Drawing.Point(136, 178)
+        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.Size = New System.Drawing.Size(157, 20)
+        Me.TxtNombre.TabIndex = 46
         '
         'Label3
         '
@@ -167,13 +188,13 @@ Partial Class FrmEmpleado
         Me.Label3.TabIndex = 45
         Me.Label3.Text = "Nombre"
         '
-        'TextBox3
+        'TxtApellidos
         '
-        Me.TextBox3.Location = New System.Drawing.Point(136, 225)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox3.TabIndex = 48
+        Me.TxtApellidos.Location = New System.Drawing.Point(136, 225)
+        Me.TxtApellidos.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtApellidos.Name = "TxtApellidos"
+        Me.TxtApellidos.Size = New System.Drawing.Size(157, 20)
+        Me.TxtApellidos.TabIndex = 48
         '
         'Label4
         '
@@ -197,13 +218,13 @@ Partial Class FrmEmpleado
         Me.Label6.TabIndex = 49
         Me.Label6.Text = "Sexo"
         '
-        'TextBox5
+        'TxtCorreo
         '
-        Me.TextBox5.Location = New System.Drawing.Point(449, 279)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox5.TabIndex = 56
+        Me.TxtCorreo.Location = New System.Drawing.Point(449, 279)
+        Me.TxtCorreo.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtCorreo.Name = "TxtCorreo"
+        Me.TxtCorreo.Size = New System.Drawing.Size(157, 20)
+        Me.TxtCorreo.TabIndex = 56
         '
         'Label7
         '
@@ -216,13 +237,13 @@ Partial Class FrmEmpleado
         Me.Label7.TabIndex = 55
         Me.Label7.Text = "Correo"
         '
-        'TextBox6
+        'TxtTelefono
         '
-        Me.TextBox6.Location = New System.Drawing.Point(449, 225)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox6.TabIndex = 54
+        Me.TxtTelefono.Location = New System.Drawing.Point(449, 225)
+        Me.TxtTelefono.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtTelefono.Name = "TxtTelefono"
+        Me.TxtTelefono.Size = New System.Drawing.Size(157, 20)
+        Me.TxtTelefono.TabIndex = 54
         '
         'Label8
         '
@@ -235,13 +256,13 @@ Partial Class FrmEmpleado
         Me.Label8.TabIndex = 53
         Me.Label8.Text = "Telefono"
         '
-        'TextBox7
+        'TxtDireccion
         '
-        Me.TextBox7.Location = New System.Drawing.Point(449, 178)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox7.TabIndex = 52
+        Me.TxtDireccion.Location = New System.Drawing.Point(449, 178)
+        Me.TxtDireccion.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtDireccion.Name = "TxtDireccion"
+        Me.TxtDireccion.Size = New System.Drawing.Size(157, 20)
+        Me.TxtDireccion.TabIndex = 52
         '
         'Label9
         '
@@ -254,82 +275,194 @@ Partial Class FrmEmpleado
         Me.Label9.TabIndex = 51
         Me.Label9.Text = "Dirección"
         '
-        'cboProfesion
+        'CboSexo
         '
-        Me.cboProfesion.FormattingEnabled = True
-        Me.cboProfesion.Location = New System.Drawing.Point(136, 278)
-        Me.cboProfesion.Name = "cboProfesion"
-        Me.cboProfesion.Size = New System.Drawing.Size(157, 21)
-        Me.cboProfesion.TabIndex = 62
+        Me.CboSexo.FormattingEnabled = True
+        Me.CboSexo.Location = New System.Drawing.Point(136, 278)
+        Me.CboSexo.Name = "CboSexo"
+        Me.CboSexo.Size = New System.Drawing.Size(157, 21)
+        Me.CboSexo.TabIndex = 62
         '
-        'ListView1
+        'LsvEmpleados
         '
-        Me.ListView1.Location = New System.Drawing.Point(6, 311)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(643, 200)
-        Me.ListView1.TabIndex = 63
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.LsvEmpleados.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdEmpleado, Me.ChNombres, Me.ChApellidos, Me.ChUsuario, Me.ChContraseña, Me.ChSexo, Me.ChDireccion, Me.ChTelefono, Me.ChCorreo})
+        Me.LsvEmpleados.ContextMenuStrip = Me.CmsEmpleado
+        Me.LsvEmpleados.Location = New System.Drawing.Point(6, 311)
+        Me.LsvEmpleados.Name = "LsvEmpleados"
+        Me.LsvEmpleados.Size = New System.Drawing.Size(643, 200)
+        Me.LsvEmpleados.TabIndex = 63
+        Me.LsvEmpleados.UseCompatibleStateImageBehavior = False
+        Me.LsvEmpleados.View = System.Windows.Forms.View.Details
+        '
+        'ChNombres
+        '
+        Me.ChNombres.Text = "Nombres"
+        Me.ChNombres.Width = 90
+        '
+        'ChApellidos
+        '
+        Me.ChApellidos.Text = "Apellidos"
+        Me.ChApellidos.Width = 77
+        '
+        'ChUsuario
+        '
+        Me.ChUsuario.Text = "Usuario"
+        '
+        'ChContraseña
+        '
+        Me.ChContraseña.Text = "Contraseña"
+        Me.ChContraseña.Width = 68
+        '
+        'ChSexo
+        '
+        Me.ChSexo.Text = "Sexo"
+        '
+        'ChDireccion
+        '
+        Me.ChDireccion.Text = "Direccion"
+        '
+        'ChTelefono
+        '
+        Me.ChTelefono.Text = "Telefono"
+        '
+        'ChCorreo
+        '
+        Me.ChCorreo.Text = "Correo"
+        Me.ChCorreo.Width = 100
+        '
+        'ChIdEmpleado
+        '
+        Me.ChIdEmpleado.Text = "IdEmpleado"
+        '
+        'TxtIdEmpleado
+        '
+        Me.TxtIdEmpleado.Enabled = False
+        Me.TxtIdEmpleado.Location = New System.Drawing.Point(293, 70)
+        Me.TxtIdEmpleado.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtIdEmpleado.Name = "TxtIdEmpleado"
+        Me.TxtIdEmpleado.Size = New System.Drawing.Size(157, 20)
+        Me.TxtIdEmpleado.TabIndex = 64
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(157, 71)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(115, 16)
+        Me.Label10.TabIndex = 65
+        Me.Label10.Text = "Cod. Empleado"
+        '
+        'PbxAgregar
+        '
+        Me.PbxAgregar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxAgregar.Image = CType(resources.GetObject("PbxAgregar.Image"), System.Drawing.Image)
+        Me.PbxAgregar.Location = New System.Drawing.Point(215, 520)
+        Me.PbxAgregar.Name = "PbxAgregar"
+        Me.PbxAgregar.Size = New System.Drawing.Size(48, 52)
+        Me.PbxAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxAgregar.TabIndex = 66
+        Me.PbxAgregar.TabStop = False
+        '
+        'CmsEmpleado
+        '
+        Me.CmsEmpleado.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmsEmpleado.Name = "CmsEmpleado"
+        Me.CmsEmpleado.Size = New System.Drawing.Size(153, 70)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'FrmEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 602)
-        Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.cboProfesion)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.PbxAgregar)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.TxtIdEmpleado)
+        Me.Controls.Add(Me.LsvEmpleados)
+        Me.Controls.Add(Me.CboSexo)
+        Me.Controls.Add(Me.TxtCorreo)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.TxtTelefono)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.TxtDireccion)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.TxtApellidos)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TxtNombre)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TxtContraseña)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TxtTelefono)
+        Me.Controls.Add(Me.TxtUsuario)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.PbxEditar)
         Me.Controls.Add(Me.PbxAtras)
-        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PbxGuardar)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FrmEmpleado"
         Me.Text = "Empleado"
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxEditar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CmsEmpleado.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PbxEditar As PictureBox
     Friend WithEvents PbxAtras As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PbxGuardar As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label5 As Label
-    Friend WithEvents TxtTelefono As TextBox
+    Friend WithEvents TxtUsuario As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtContraseña As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtNombre As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TxtApellidos As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TxtCorreo As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TxtTelefono As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TxtDireccion As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents cboProfesion As ComboBox
-    Friend WithEvents ListView1 As ListView
+    Friend WithEvents CboSexo As ComboBox
+    Friend WithEvents LsvEmpleados As ListView
+    Friend WithEvents ChIdEmpleado As ColumnHeader
+    Friend WithEvents ChNombres As ColumnHeader
+    Friend WithEvents ChApellidos As ColumnHeader
+    Friend WithEvents ChUsuario As ColumnHeader
+    Friend WithEvents ChContraseña As ColumnHeader
+    Friend WithEvents ChSexo As ColumnHeader
+    Friend WithEvents ChDireccion As ColumnHeader
+    Friend WithEvents ChTelefono As ColumnHeader
+    Friend WithEvents ChCorreo As ColumnHeader
+    Friend WithEvents TxtIdEmpleado As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents PbxAgregar As PictureBox
+    Friend WithEvents CmsEmpleado As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class
