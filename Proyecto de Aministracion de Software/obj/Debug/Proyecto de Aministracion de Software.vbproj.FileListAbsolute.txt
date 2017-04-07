@@ -15,3 +15,7 @@ C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\
 C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto_de_Aministracion_de_Software.FrmPantallaPrincipal.resources
 C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto_de_Aministracion_de_Software.FrmProgramas.resources
 C:\Users\Erick Reyes\Documents\UNICAH\2017\I PERIODO\Administracion de Software\Proyecto\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto_de_Aministracion_de_Software.FrmProgramasComputadora.resources
+C:\Users\Edwin Ordoñez\Desktop\proyectogithup\TechnoSchool\Proyecto de Aministracion de Software\bin\Debug\Proyecto de Aministracion de Software.exe.config
+C:\Users\Edwin Ordoñez\Desktop\proyectogithup\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto de Aministracion de Software.exe
+C:\Users\Edwin Ordoñez\Desktop\proyectogithup\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto de Aministracion de Software.xml
+C:\Users\Edwin Ordoñez\Desktop\proyectogithup\TechnoSchool\Proyecto de Aministracion de Software\obj\Debug\Proyecto de Aministracion de Software.pdb
