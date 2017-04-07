@@ -22,55 +22,71 @@ Partial Class FrmProgramas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProgramas))
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PbxEditar = New System.Windows.Forms.PictureBox()
         Me.PbxAtras = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PbxGuardar = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtTelefono = New System.Windows.Forms.TextBox()
+        Me.TxtNombrePrograma = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cboProfesion = New System.Windows.Forms.ComboBox()
+        Me.CboTipoLicencia = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CboTipoPrograma = New System.Windows.Forms.ComboBox()
+        Me.LsvProgramas = New System.Windows.Forms.ListView()
+        Me.ChIdPrograma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChNombrePrograma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChTipoPrograma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChTipoLicencia = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CmsProgramas = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PbxAgregar = New System.Windows.Forms.PictureBox()
+        Me.TxtIdPrograma = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        CType(Me.PbxEditar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.CmsProgramas.SuspendLayout()
+        CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'PictureBox4
+        'PbxEditar
         '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(306, 521)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(48, 52)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 46
-        Me.PictureBox4.TabStop = False
+        Me.PbxEditar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxEditar.Image = CType(resources.GetObject("PbxEditar.Image"), System.Drawing.Image)
+        Me.PbxEditar.Location = New System.Drawing.Point(350, 521)
+        Me.PbxEditar.Name = "PbxEditar"
+        Me.PbxEditar.Size = New System.Drawing.Size(48, 52)
+        Me.PbxEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxEditar.TabIndex = 46
+        Me.PbxEditar.TabStop = False
         '
         'PbxAtras
         '
+        Me.PbxAtras.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxAtras.Image = CType(resources.GetObject("PbxAtras.Image"), System.Drawing.Image)
-        Me.PbxAtras.Location = New System.Drawing.Point(453, 526)
+        Me.PbxAtras.Location = New System.Drawing.Point(497, 526)
         Me.PbxAtras.Name = "PbxAtras"
         Me.PbxAtras.Size = New System.Drawing.Size(43, 47)
         Me.PbxAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxAtras.TabIndex = 45
         Me.PbxAtras.TabStop = False
         '
-        'PictureBox2
+        'PbxGuardar
         '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(154, 523)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(43, 47)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 44
-        Me.PictureBox2.TabStop = False
+        Me.PbxGuardar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxGuardar.Image = CType(resources.GetObject("PbxGuardar.Image"), System.Drawing.Image)
+        Me.PbxGuardar.Location = New System.Drawing.Point(88, 523)
+        Me.PbxGuardar.Name = "PbxGuardar"
+        Me.PbxGuardar.Size = New System.Drawing.Size(43, 47)
+        Me.PbxGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxGuardar.TabIndex = 44
+        Me.PbxGuardar.TabStop = False
         '
         'Panel2
         '
@@ -104,107 +120,195 @@ Partial Class FrmProgramas
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(99, 183)
+        Me.Label2.Location = New System.Drawing.Point(99, 179)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(134, 16)
         Me.Label2.TabIndex = 49
         Me.Label2.Text = "Tipo de Programa"
         '
-        'TxtTelefono
+        'TxtNombrePrograma
         '
-        Me.TxtTelefono.Location = New System.Drawing.Point(259, 121)
-        Me.TxtTelefono.Margin = New System.Windows.Forms.Padding(4)
-        Me.TxtTelefono.Name = "TxtTelefono"
-        Me.TxtTelefono.Size = New System.Drawing.Size(253, 20)
-        Me.TxtTelefono.TabIndex = 48
+        Me.TxtNombrePrograma.Location = New System.Drawing.Point(259, 121)
+        Me.TxtNombrePrograma.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtNombrePrograma.Name = "TxtNombrePrograma"
+        Me.TxtNombrePrograma.Size = New System.Drawing.Size(253, 20)
+        Me.TxtNombrePrograma.TabIndex = 48
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(72, 125)
+        Me.Label1.Location = New System.Drawing.Point(72, 122)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(161, 16)
         Me.Label1.TabIndex = 47
         Me.Label1.Text = "Nombre del Programa"
         '
-        'cboProfesion
+        'CboTipoLicencia
         '
-        Me.cboProfesion.FormattingEnabled = True
-        Me.cboProfesion.Location = New System.Drawing.Point(259, 238)
-        Me.cboProfesion.Name = "cboProfesion"
-        Me.cboProfesion.Size = New System.Drawing.Size(253, 21)
-        Me.cboProfesion.TabIndex = 64
+        Me.CboTipoLicencia.FormattingEnabled = True
+        Me.CboTipoLicencia.Location = New System.Drawing.Point(259, 238)
+        Me.CboTipoLicencia.Name = "CboTipoLicencia"
+        Me.CboTipoLicencia.Size = New System.Drawing.Size(253, 21)
+        Me.CboTipoLicencia.TabIndex = 64
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(99, 243)
+        Me.Label6.Location = New System.Drawing.Point(105, 239)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(128, 16)
         Me.Label6.TabIndex = 63
         Me.Label6.Text = "Tipo de Licencia "
         '
-        'ComboBox1
+        'CboTipoPrograma
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(259, 178)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(253, 21)
-        Me.ComboBox1.TabIndex = 65
+        Me.CboTipoPrograma.FormattingEnabled = True
+        Me.CboTipoPrograma.Location = New System.Drawing.Point(259, 178)
+        Me.CboTipoPrograma.Name = "CboTipoPrograma"
+        Me.CboTipoPrograma.Size = New System.Drawing.Size(253, 21)
+        Me.CboTipoPrograma.TabIndex = 65
         '
-        'ListView1
+        'LsvProgramas
         '
-        Me.ListView1.Location = New System.Drawing.Point(6, 292)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(643, 200)
-        Me.ListView1.TabIndex = 66
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.LsvProgramas.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdPrograma, Me.ChNombrePrograma, Me.ChTipoPrograma, Me.ChTipoLicencia})
+        Me.LsvProgramas.ContextMenuStrip = Me.CmsProgramas
+        Me.LsvProgramas.GridLines = True
+        Me.LsvProgramas.Location = New System.Drawing.Point(6, 292)
+        Me.LsvProgramas.Name = "LsvProgramas"
+        Me.LsvProgramas.Size = New System.Drawing.Size(643, 200)
+        Me.LsvProgramas.TabIndex = 66
+        Me.LsvProgramas.UseCompatibleStateImageBehavior = False
+        Me.LsvProgramas.View = System.Windows.Forms.View.Details
+        '
+        'ChIdPrograma
+        '
+        Me.ChIdPrograma.Text = "Cod. Programa"
+        Me.ChIdPrograma.Width = 139
+        '
+        'ChNombrePrograma
+        '
+        Me.ChNombrePrograma.Text = "Nombre Programa"
+        Me.ChNombrePrograma.Width = 179
+        '
+        'ChTipoPrograma
+        '
+        Me.ChTipoPrograma.Text = "Tipo Programa"
+        Me.ChTipoPrograma.Width = 162
+        '
+        'ChTipoLicencia
+        '
+        Me.ChTipoLicencia.Text = "Tipo Licencia"
+        Me.ChTipoLicencia.Width = 157
+        '
+        'CmsProgramas
+        '
+        Me.CmsProgramas.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmsProgramas.Name = "CmsProgramas"
+        Me.CmsProgramas.Size = New System.Drawing.Size(118, 48)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
+        'PbxAgregar
+        '
+        Me.PbxAgregar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxAgregar.Image = CType(resources.GetObject("PbxAgregar.Image"), System.Drawing.Image)
+        Me.PbxAgregar.Location = New System.Drawing.Point(216, 521)
+        Me.PbxAgregar.Name = "PbxAgregar"
+        Me.PbxAgregar.Size = New System.Drawing.Size(48, 52)
+        Me.PbxAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxAgregar.TabIndex = 67
+        Me.PbxAgregar.TabStop = False
+        '
+        'TxtIdPrograma
+        '
+        Me.TxtIdPrograma.Enabled = False
+        Me.TxtIdPrograma.Location = New System.Drawing.Point(259, 69)
+        Me.TxtIdPrograma.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtIdPrograma.Name = "TxtIdPrograma"
+        Me.TxtIdPrograma.Size = New System.Drawing.Size(253, 20)
+        Me.TxtIdPrograma.TabIndex = 68
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(77, 70)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(156, 16)
+        Me.Label3.TabIndex = 69
+        Me.Label3.Text = "Código del Programa"
         '
         'FrmProgramas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 602)
-        Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.cboProfesion)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.TxtIdPrograma)
+        Me.Controls.Add(Me.PbxAgregar)
+        Me.Controls.Add(Me.LsvProgramas)
+        Me.Controls.Add(Me.CboTipoPrograma)
+        Me.Controls.Add(Me.CboTipoLicencia)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TxtTelefono)
+        Me.Controls.Add(Me.TxtNombrePrograma)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.PbxEditar)
         Me.Controls.Add(Me.PbxAtras)
-        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PbxGuardar)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FrmProgramas"
         Me.Text = "Programas"
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxEditar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.CmsProgramas.ResumeLayout(False)
+        CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PbxEditar As PictureBox
     Friend WithEvents PbxAtras As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PbxGuardar As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TxtTelefono As TextBox
+    Friend WithEvents TxtNombrePrograma As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents cboProfesion As ComboBox
+    Friend WithEvents CboTipoLicencia As ComboBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ListView1 As ListView
+    Friend WithEvents CboTipoPrograma As ComboBox
+    Friend WithEvents LsvProgramas As ListView
+    Friend WithEvents PbxAgregar As PictureBox
+    Friend WithEvents ChIdPrograma As ColumnHeader
+    Friend WithEvents ChNombrePrograma As ColumnHeader
+    Friend WithEvents ChTipoPrograma As ColumnHeader
+    Friend WithEvents ChTipoLicencia As ColumnHeader
+    Friend WithEvents TxtIdPrograma As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents CmsProgramas As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class

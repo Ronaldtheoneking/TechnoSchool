@@ -374,5 +374,4 @@ Public Class FrmComputadora
     Private Sub CboMarca_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles CboMarca.SelectionChangeCommitted
         Call CargarModelo()
     End Sub
-
 End Class

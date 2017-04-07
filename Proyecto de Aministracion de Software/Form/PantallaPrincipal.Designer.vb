@@ -162,9 +162,9 @@ Partial Class FrmPantallaPrincipal
         Me.LblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LblNombreUsuario.Location = New System.Drawing.Point(210, 279)
         Me.LblNombreUsuario.Name = "LblNombreUsuario"
-        Me.LblNombreUsuario.Size = New System.Drawing.Size(261, 21)
+        Me.LblNombreUsuario.Size = New System.Drawing.Size(107, 21)
         Me.LblNombreUsuario.TabIndex = 16
-        Me.LblNombreUsuario.Text = "Bienvenido Myriam Ordoñez"
+        Me.LblNombreUsuario.Text = "Bienvenido"
         '
         'DateTimePicker1
         '

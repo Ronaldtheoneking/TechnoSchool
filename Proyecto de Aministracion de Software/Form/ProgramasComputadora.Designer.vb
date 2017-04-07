@@ -22,10 +22,11 @@ Partial Class FrmProgramasComputadora
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProgramasComputadora))
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PbxEditar = New System.Windows.Forms.PictureBox()
         Me.PbxAtras = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PbxGuardar = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -34,47 +35,67 @@ Partial Class FrmProgramasComputadora
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.dtpFechaNacimiento = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpFechaInstalacion = New System.Windows.Forms.DateTimePicker()
+        Me.DtpFechaVencimiento = New System.Windows.Forms.DateTimePicker()
         Me.CboPrograma = New System.Windows.Forms.ComboBox()
         Me.CboComputadora = New System.Windows.Forms.ComboBox()
         Me.CboEmpleado = New System.Windows.Forms.ComboBox()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PbxAgregar = New System.Windows.Forms.PictureBox()
+        Me.LsvProgramaComputadora = New System.Windows.Forms.ListView()
+        Me.ChCodProgComp = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChIdPrograma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChNombrePrograma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChTipoPrograma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChTipoLicencia = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChEmpleado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChFechaInstalacion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChFechaVencimiento = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CmsProgComputadora = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TxtIdProgComputadora = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.BtnCambiar = New System.Windows.Forms.Button()
+        CType(Me.PbxEditar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CmsProgComputadora.SuspendLayout()
         Me.SuspendLayout()
         '
-        'PictureBox4
+        'PbxEditar
         '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(306, 521)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(48, 52)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 52
-        Me.PictureBox4.TabStop = False
+        Me.PbxEditar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxEditar.Image = CType(resources.GetObject("PbxEditar.Image"), System.Drawing.Image)
+        Me.PbxEditar.Location = New System.Drawing.Point(347, 521)
+        Me.PbxEditar.Name = "PbxEditar"
+        Me.PbxEditar.Size = New System.Drawing.Size(48, 52)
+        Me.PbxEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxEditar.TabIndex = 52
+        Me.PbxEditar.TabStop = False
         '
         'PbxAtras
         '
+        Me.PbxAtras.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbxAtras.Image = CType(resources.GetObject("PbxAtras.Image"), System.Drawing.Image)
-        Me.PbxAtras.Location = New System.Drawing.Point(453, 526)
+        Me.PbxAtras.Location = New System.Drawing.Point(492, 526)
         Me.PbxAtras.Name = "PbxAtras"
         Me.PbxAtras.Size = New System.Drawing.Size(43, 47)
         Me.PbxAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxAtras.TabIndex = 51
         Me.PbxAtras.TabStop = False
         '
-        'PictureBox2
+        'PbxGuardar
         '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(154, 523)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(43, 47)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 50
-        Me.PictureBox2.TabStop = False
+        Me.PbxGuardar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxGuardar.Image = CType(resources.GetObject("PbxGuardar.Image"), System.Drawing.Image)
+        Me.PbxGuardar.Location = New System.Drawing.Point(92, 523)
+        Me.PbxGuardar.Name = "PbxGuardar"
+        Me.PbxGuardar.Size = New System.Drawing.Size(43, 47)
+        Me.PbxGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxGuardar.TabIndex = 50
+        Me.PbxGuardar.TabStop = False
         '
         'Panel2
         '
@@ -130,7 +151,7 @@ Partial Class FrmProgramasComputadora
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(119, 107)
+        Me.Label1.Location = New System.Drawing.Point(119, 145)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(76, 16)
@@ -141,12 +162,12 @@ Partial Class FrmProgramasComputadora
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(94, 146)
+        Me.Label3.Location = New System.Drawing.Point(53, 103)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(101, 16)
+        Me.Label3.Size = New System.Drawing.Size(140, 16)
         Me.Label3.TabIndex = 72
-        Me.Label3.Text = "Computadora"
+        Me.Label3.Text = "Num. Computadora"
         '
         'Label4
         '
@@ -159,26 +180,26 @@ Partial Class FrmProgramasComputadora
         Me.Label4.TabIndex = 75
         Me.Label4.Text = "Fecha de Vencimiento"
         '
-        'dtpFechaNacimiento
+        'dtpFechaInstalacion
         '
-        Me.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaNacimiento.Location = New System.Drawing.Point(200, 225)
-        Me.dtpFechaNacimiento.Name = "dtpFechaNacimiento"
-        Me.dtpFechaNacimiento.Size = New System.Drawing.Size(96, 20)
-        Me.dtpFechaNacimiento.TabIndex = 76
+        Me.dtpFechaInstalacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFechaInstalacion.Location = New System.Drawing.Point(200, 225)
+        Me.dtpFechaInstalacion.Name = "dtpFechaInstalacion"
+        Me.dtpFechaInstalacion.Size = New System.Drawing.Size(96, 20)
+        Me.dtpFechaInstalacion.TabIndex = 76
         '
-        'DateTimePicker1
+        'DtpFechaVencimiento
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(482, 225)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(96, 20)
-        Me.DateTimePicker1.TabIndex = 77
+        Me.DtpFechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFechaVencimiento.Location = New System.Drawing.Point(482, 225)
+        Me.DtpFechaVencimiento.Name = "DtpFechaVencimiento"
+        Me.DtpFechaVencimiento.Size = New System.Drawing.Size(96, 20)
+        Me.DtpFechaVencimiento.TabIndex = 77
         '
         'CboPrograma
         '
         Me.CboPrograma.FormattingEnabled = True
-        Me.CboPrograma.Location = New System.Drawing.Point(203, 106)
+        Me.CboPrograma.Location = New System.Drawing.Point(203, 144)
         Me.CboPrograma.Name = "CboPrograma"
         Me.CboPrograma.Size = New System.Drawing.Size(293, 21)
         Me.CboPrograma.TabIndex = 78
@@ -186,7 +207,7 @@ Partial Class FrmProgramasComputadora
         'CboComputadora
         '
         Me.CboComputadora.FormattingEnabled = True
-        Me.CboComputadora.Location = New System.Drawing.Point(203, 145)
+        Me.CboComputadora.Location = New System.Drawing.Point(203, 102)
         Me.CboComputadora.Name = "CboComputadora"
         Me.CboComputadora.Size = New System.Drawing.Size(293, 21)
         Me.CboComputadora.TabIndex = 79
@@ -199,50 +220,157 @@ Partial Class FrmProgramasComputadora
         Me.CboEmpleado.Size = New System.Drawing.Size(293, 21)
         Me.CboEmpleado.TabIndex = 80
         '
-        'ListView1
+        'PbxAgregar
         '
-        Me.ListView1.Location = New System.Drawing.Point(7, 282)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(642, 200)
-        Me.ListView1.TabIndex = 81
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.PbxAgregar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PbxAgregar.Image = CType(resources.GetObject("PbxAgregar.Image"), System.Drawing.Image)
+        Me.PbxAgregar.Location = New System.Drawing.Point(216, 521)
+        Me.PbxAgregar.Name = "PbxAgregar"
+        Me.PbxAgregar.Size = New System.Drawing.Size(48, 52)
+        Me.PbxAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxAgregar.TabIndex = 82
+        Me.PbxAgregar.TabStop = False
+        '
+        'LsvProgramaComputadora
+        '
+        Me.LsvProgramaComputadora.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChCodProgComp, Me.ChIdPrograma, Me.ChNombrePrograma, Me.ChTipoPrograma, Me.ChTipoLicencia, Me.ChEmpleado, Me.ChFechaInstalacion, Me.ChFechaVencimiento})
+        Me.LsvProgramaComputadora.ContextMenuStrip = Me.CmsProgComputadora
+        Me.LsvProgramaComputadora.GridLines = True
+        Me.LsvProgramaComputadora.Location = New System.Drawing.Point(5, 283)
+        Me.LsvProgramaComputadora.Name = "LsvProgramaComputadora"
+        Me.LsvProgramaComputadora.Size = New System.Drawing.Size(643, 200)
+        Me.LsvProgramaComputadora.TabIndex = 83
+        Me.LsvProgramaComputadora.UseCompatibleStateImageBehavior = False
+        Me.LsvProgramaComputadora.View = System.Windows.Forms.View.Details
+        '
+        'ChCodProgComp
+        '
+        Me.ChCodProgComp.Text = "Cod. Instalacion"
+        Me.ChCodProgComp.Width = 90
+        '
+        'ChIdPrograma
+        '
+        Me.ChIdPrograma.Text = "Cod. Programa"
+        Me.ChIdPrograma.Width = 85
+        '
+        'ChNombrePrograma
+        '
+        Me.ChNombrePrograma.Text = "Nombre Programa"
+        Me.ChNombrePrograma.Width = 138
+        '
+        'ChTipoPrograma
+        '
+        Me.ChTipoPrograma.Text = "Tipo Programa"
+        Me.ChTipoPrograma.Width = 98
+        '
+        'ChTipoLicencia
+        '
+        Me.ChTipoLicencia.Text = "Tipo Licencia"
+        Me.ChTipoLicencia.Width = 85
+        '
+        'ChEmpleado
+        '
+        Me.ChEmpleado.Text = "Instalado Por"
+        Me.ChEmpleado.Width = 77
+        '
+        'ChFechaInstalacion
+        '
+        Me.ChFechaInstalacion.Text = "Fecha Instalación"
+        Me.ChFechaInstalacion.Width = 76
+        '
+        'ChFechaVencimiento
+        '
+        Me.ChFechaVencimiento.Text = "Vecha Vencimiento"
+        Me.ChFechaVencimiento.Width = 80
+        '
+        'CmsProgComputadora
+        '
+        Me.CmsProgComputadora.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmsProgComputadora.Name = "CmsProgComputadora"
+        Me.CmsProgComputadora.Size = New System.Drawing.Size(153, 70)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
+        'TxtIdProgComputadora
+        '
+        Me.TxtIdProgComputadora.Enabled = False
+        Me.TxtIdProgComputadora.Location = New System.Drawing.Point(200, 69)
+        Me.TxtIdProgComputadora.Name = "TxtIdProgComputadora"
+        Me.TxtIdProgComputadora.Size = New System.Drawing.Size(296, 20)
+        Me.TxtIdProgComputadora.TabIndex = 84
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(74, 70)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(119, 16)
+        Me.Label7.TabIndex = 85
+        Me.Label7.Text = "Cod. Instalación"
+        '
+        'BtnCambiar
+        '
+        Me.BtnCambiar.Location = New System.Drawing.Point(521, 92)
+        Me.BtnCambiar.Name = "BtnCambiar"
+        Me.BtnCambiar.Size = New System.Drawing.Size(106, 38)
+        Me.BtnCambiar.TabIndex = 86
+        Me.BtnCambiar.Text = "Cambiar Computadora"
+        Me.BtnCambiar.UseVisualStyleBackColor = True
         '
         'FrmProgramasComputadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 602)
-        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.BtnCambiar)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.TxtIdProgComputadora)
+        Me.Controls.Add(Me.LsvProgramaComputadora)
+        Me.Controls.Add(Me.PbxAgregar)
         Me.Controls.Add(Me.CboEmpleado)
         Me.Controls.Add(Me.CboComputadora)
         Me.Controls.Add(Me.CboPrograma)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.dtpFechaNacimiento)
+        Me.Controls.Add(Me.DtpFechaVencimiento)
+        Me.Controls.Add(Me.dtpFechaInstalacion)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.PbxEditar)
         Me.Controls.Add(Me.PbxAtras)
-        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PbxGuardar)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FrmProgramasComputadora"
-        Me.Text = "ProgramasComputadora"
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = " "
+        CType(Me.PbxEditar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CmsProgComputadora.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PbxEditar As PictureBox
     Friend WithEvents PbxAtras As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PbxGuardar As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label5 As Label
@@ -251,10 +379,25 @@ Partial Class FrmProgramasComputadora
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents dtpFechaNacimiento As DateTimePicker
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtpFechaInstalacion As DateTimePicker
+    Friend WithEvents DtpFechaVencimiento As DateTimePicker
     Friend WithEvents CboPrograma As ComboBox
     Friend WithEvents CboComputadora As ComboBox
     Friend WithEvents CboEmpleado As ComboBox
-    Friend WithEvents ListView1 As ListView
+    Friend WithEvents PbxAgregar As PictureBox
+    Friend WithEvents LsvProgramaComputadora As ListView
+    Friend WithEvents ChIdPrograma As ColumnHeader
+    Friend WithEvents ChNombrePrograma As ColumnHeader
+    Friend WithEvents ChTipoPrograma As ColumnHeader
+    Friend WithEvents ChTipoLicencia As ColumnHeader
+    Friend WithEvents ChEmpleado As ColumnHeader
+    Friend WithEvents ChFechaInstalacion As ColumnHeader
+    Friend WithEvents ChFechaVencimiento As ColumnHeader
+    Friend WithEvents ChCodProgComp As ColumnHeader
+    Friend WithEvents TxtIdProgComputadora As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents BtnCambiar As Button
+    Friend WithEvents CmsProgComputadora As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class

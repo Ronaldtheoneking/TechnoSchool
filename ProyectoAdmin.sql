@@ -315,3 +315,36 @@ as
 	set nocount on
 	select * from Sexo
 go
+
+Create Procedure Sp_MostrarTipoPrograma
+as
+	set nocount on
+	select * from TipoPrograma
+go
+
+Create Procedure Sp_MostrarTipoLicencia
+as
+	set nocount on
+	select * from TipoLicencia
+go
+
+Create Procedure Sp_MostrarProgramas
+as
+	set nocount on
+	select a.IdPrograma, a.NombrePrograma, b.TipoPrograma, c.TipoLicencia
+	from Programas a inner join TipoPrograma b on a.IdTipoPrograma = b.IdTipoPrograma
+	inner join TipoLicencia c on a.IdTipoLicencia = c.IdTipoLicencia
+go
+
+Create Procedure Sp_MostrarProgramasComputadora
+@IdComputadora int
+as
+	set nocount on
+	select a.IdProgramaComputadora, b.IdPrograma, b.NombrePrograma, c.TipoPrograma, d.TipoLicencia, e.NombreUsuario, a.FechaInstalacion, a.FechaVencimientoLicencia
+	from ProgramaComputadora a inner join Programas b on a.IdPrograma = b.IdPrograma
+	inner join TipoPrograma c on b.IdTipoPrograma = c.IdTipoPrograma
+	inner join TipoLicencia d on b.IdTipoLicencia = b.IdTipoLicencia
+	inner join Empleado e on a.IdEmpleado = e.IdEmpleado
+	where IdComputadora = @IdComputadora
+go
+
