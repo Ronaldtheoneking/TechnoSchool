@@ -301,6 +301,7 @@ Partial Class FrmComputadora
         Me.LsvComputadoras.CheckBoxes = True
         Me.LsvComputadoras.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdComputadora, Me.ChMarca, Me.ChModelo, Me.ChMemoriaRam, Me.ChDiscoDuro, Me.ChTarjetaVideo, Me.ChCapacidad, Me.ChUnidadOptica, Me.ChDisponible})
         Me.LsvComputadoras.ContextMenuStrip = Me.CmsComputadora
+        Me.LsvComputadoras.GridLines = True
         Me.LsvComputadoras.Location = New System.Drawing.Point(7, 304)
         Me.LsvComputadoras.Name = "LsvComputadoras"
         Me.LsvComputadoras.Size = New System.Drawing.Size(641, 200)

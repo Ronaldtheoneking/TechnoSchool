@@ -40,6 +40,7 @@ Public Class FrmProgramasComputadora
 
     Private Sub CboComputadora_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles CboComputadora.SelectionChangeCommitted
         Call CargarLsv()
+        Call CargarLsvComputadora()
     End Sub
 
     Private Sub CargarLsv()
@@ -80,6 +81,51 @@ Public Class FrmProgramasComputadora
 
             Catch ex As Exception
                 MessageBox.Show("Error al listar los programas" + ex.Message)
+            Finally
+                cn.Close()
+            End Try
+        End Using
+    End Sub
+
+    Private Sub CargarLsvComputadora()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
+        Using cmd As New SqlCommand
+
+            Try
+                cn.Open()
+
+                With cmd
+                    .CommandText = "Sp_MostrarIdComputadoras"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = cn
+                    .Parameters.Add("@IdComputadora", SqlDbType.Int).Value = CboComputadora.SelectedValue
+
+                End With
+
+                Dim MostrarComputadoras As SqlDataReader
+                MostrarComputadoras = cmd.ExecuteReader
+                LsvComputadoras.Items.Clear()
+
+                While MostrarComputadoras.Read = True
+                    With LsvComputadoras.Items.Add(MostrarComputadoras("IdComputadora").ToString)
+                        .SubItems.Add(MostrarComputadoras("Marca").ToString)
+                        .SubItems.Add(MostrarComputadoras("Modelo").ToString)
+                        .SubItems.Add(MostrarComputadoras("CapacidadMemoria").ToString)
+                        .SubItems.Add(MostrarComputadoras("CapDiscoDuro").ToString)
+                        .SubItems.Add(MostrarComputadoras("TarjetaVideo").ToString)
+                        .SubItems.Add(MostrarComputadoras("Capacidad").ToString)
+                        .SubItems.Add(MostrarComputadoras("UnidadOptica").ToString)
+                        .SubItems.Add(MostrarComputadoras("Disponible").ToString)
+
+
+                    End With
+                End While
+
+            Catch ex As Exception
+                MessageBox.Show("Error al listar las Computadoras" + ex.Message)
             Finally
                 cn.Close()
             End Try

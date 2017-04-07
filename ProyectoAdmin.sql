@@ -336,15 +336,29 @@ as
 	inner join TipoLicencia c on a.IdTipoLicencia = c.IdTipoLicencia
 go
 
-Create Procedure Sp_MostrarProgramasComputadora
+alter Procedure Sp_MostrarProgramasComputadora
 @IdComputadora int
 as
 	set nocount on
 	select a.IdProgramaComputadora, b.IdPrograma, b.NombrePrograma, c.TipoPrograma, d.TipoLicencia, e.NombreUsuario, a.FechaInstalacion, a.FechaVencimientoLicencia
 	from ProgramaComputadora a inner join Programas b on a.IdPrograma = b.IdPrograma
 	inner join TipoPrograma c on b.IdTipoPrograma = c.IdTipoPrograma
-	inner join TipoLicencia d on b.IdTipoLicencia = b.IdTipoLicencia
+	inner join TipoLicencia d on b.IdTipoLicencia = d.IdTipoLicencia
 	inner join Empleado e on a.IdEmpleado = e.IdEmpleado
+	where IdComputadora = @IdComputadora
+go
+
+
+Create Procedure Sp_MostrarIdComputadoras
+@IdComputadora int
+as
+	set nocount on
+	select a.IdComputadora, c.Marca, b.Modelo, d.CapacidadMemoria, a.CapDiscoDuro, e.TarjetaVideo, e.Capacidad, f.UnidadOptica, a.Disponible
+	from Computadora a inner join Modelo b on a.IdModelo = b.IdModelo
+	inner join Marca c on b.IdMarca = c.IdMarca
+	inner join CapMemoriaRam d on a.IdCapMemoriaRam = d.IdCapMemoriaRam
+	inner join TarjetaVideo e on e.IdTarjetaVideo = a.IdTarjetaVideo
+	inner join TipoUnidadOptica f on a.IdTipoUnidadOptica = f.IdTipoUnidadOptica
 	where IdComputadora = @IdComputadora
 go
 

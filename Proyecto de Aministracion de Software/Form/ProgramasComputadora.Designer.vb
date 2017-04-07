@@ -41,6 +41,15 @@ Partial Class FrmProgramasComputadora
         Me.CboComputadora = New System.Windows.Forms.ComboBox()
         Me.CboEmpleado = New System.Windows.Forms.ComboBox()
         Me.PbxAgregar = New System.Windows.Forms.PictureBox()
+        Me.CmsProgComputadora = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TxtIdProgComputadora = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.BtnCambiar = New System.Windows.Forms.Button()
+        Me.TctrlProgramas = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.LsvProgramaComputadora = New System.Windows.Forms.ListView()
         Me.ChCodProgComp = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChIdPrograma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -50,18 +59,25 @@ Partial Class FrmProgramasComputadora
         Me.ChEmpleado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChFechaInstalacion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChFechaVencimiento = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.CmsProgComputadora = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TxtIdProgComputadora = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.BtnCambiar = New System.Windows.Forms.Button()
+        Me.LsvComputadoras = New System.Windows.Forms.ListView()
+        Me.ChIdComputadora = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChMarca = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChModelo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChMemoriaRam = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChDiscoDuro = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChTarjetaVideo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChCapacidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChUnidadOptica = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChDisponible = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.PbxEditar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsProgComputadora.SuspendLayout()
+        Me.TctrlProgramas.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'PbxEditar
@@ -231,15 +247,94 @@ Partial Class FrmProgramasComputadora
         Me.PbxAgregar.TabIndex = 82
         Me.PbxAgregar.TabStop = False
         '
+        'CmsProgComputadora
+        '
+        Me.CmsProgComputadora.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmsProgComputadora.Name = "CmsProgComputadora"
+        Me.CmsProgComputadora.Size = New System.Drawing.Size(118, 48)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
+        'TxtIdProgComputadora
+        '
+        Me.TxtIdProgComputadora.Enabled = False
+        Me.TxtIdProgComputadora.Location = New System.Drawing.Point(200, 69)
+        Me.TxtIdProgComputadora.Name = "TxtIdProgComputadora"
+        Me.TxtIdProgComputadora.Size = New System.Drawing.Size(296, 20)
+        Me.TxtIdProgComputadora.TabIndex = 84
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(74, 70)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(119, 16)
+        Me.Label7.TabIndex = 85
+        Me.Label7.Text = "Cod. Instalación"
+        '
+        'BtnCambiar
+        '
+        Me.BtnCambiar.Location = New System.Drawing.Point(521, 92)
+        Me.BtnCambiar.Name = "BtnCambiar"
+        Me.BtnCambiar.Size = New System.Drawing.Size(106, 38)
+        Me.BtnCambiar.TabIndex = 86
+        Me.BtnCambiar.Text = "Cambiar Computadora"
+        Me.BtnCambiar.UseVisualStyleBackColor = True
+        '
+        'TctrlProgramas
+        '
+        Me.TctrlProgramas.AccessibleName = ""
+        Me.TctrlProgramas.Controls.Add(Me.TabPage1)
+        Me.TctrlProgramas.Controls.Add(Me.TabPage2)
+        Me.TctrlProgramas.Location = New System.Drawing.Point(5, 303)
+        Me.TctrlProgramas.Name = "TctrlProgramas"
+        Me.TctrlProgramas.SelectedIndex = 0
+        Me.TctrlProgramas.Size = New System.Drawing.Size(643, 200)
+        Me.TctrlProgramas.TabIndex = 87
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.LsvComputadoras)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(635, 174)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "TabPage1"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.LsvProgramaComputadora)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(635, 174)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "TabPage2"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
         'LsvProgramaComputadora
         '
         Me.LsvProgramaComputadora.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChCodProgComp, Me.ChIdPrograma, Me.ChNombrePrograma, Me.ChTipoPrograma, Me.ChTipoLicencia, Me.ChEmpleado, Me.ChFechaInstalacion, Me.ChFechaVencimiento})
         Me.LsvProgramaComputadora.ContextMenuStrip = Me.CmsProgComputadora
         Me.LsvProgramaComputadora.GridLines = True
-        Me.LsvProgramaComputadora.Location = New System.Drawing.Point(5, 283)
+        Me.LsvProgramaComputadora.Location = New System.Drawing.Point(-4, -8)
         Me.LsvProgramaComputadora.Name = "LsvProgramaComputadora"
-        Me.LsvProgramaComputadora.Size = New System.Drawing.Size(643, 200)
-        Me.LsvProgramaComputadora.TabIndex = 83
+        Me.LsvProgramaComputadora.Size = New System.Drawing.Size(643, 191)
+        Me.LsvProgramaComputadora.TabIndex = 85
         Me.LsvProgramaComputadora.UseCompatibleStateImageBehavior = False
         Me.LsvProgramaComputadora.View = System.Windows.Forms.View.Details
         '
@@ -283,61 +378,70 @@ Partial Class FrmProgramasComputadora
         Me.ChFechaVencimiento.Text = "Vecha Vencimiento"
         Me.ChFechaVencimiento.Width = 80
         '
-        'CmsProgComputadora
+        'LsvComputadoras
         '
-        Me.CmsProgComputadora.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
-        Me.CmsProgComputadora.Name = "CmsProgComputadora"
-        Me.CmsProgComputadora.Size = New System.Drawing.Size(153, 70)
+        Me.LsvComputadoras.CheckBoxes = True
+        Me.LsvComputadoras.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdComputadora, Me.ChMarca, Me.ChModelo, Me.ChMemoriaRam, Me.ChDiscoDuro, Me.ChTarjetaVideo, Me.ChCapacidad, Me.ChUnidadOptica, Me.ChDisponible})
+        Me.LsvComputadoras.GridLines = True
+        Me.LsvComputadoras.Location = New System.Drawing.Point(-3, 0)
+        Me.LsvComputadoras.Name = "LsvComputadoras"
+        Me.LsvComputadoras.Size = New System.Drawing.Size(641, 178)
+        Me.LsvComputadoras.TabIndex = 57
+        Me.LsvComputadoras.UseCompatibleStateImageBehavior = False
+        Me.LsvComputadoras.View = System.Windows.Forms.View.Details
         '
-        'EditarToolStripMenuItem
+        'ChIdComputadora
         '
-        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.EditarToolStripMenuItem.Text = "Editar"
+        Me.ChIdComputadora.Text = "Num. Computadora"
+        Me.ChIdComputadora.Width = 113
         '
-        'EliminarToolStripMenuItem
+        'ChMarca
         '
-        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        Me.ChMarca.Text = "Marca"
         '
-        'TxtIdProgComputadora
+        'ChModelo
         '
-        Me.TxtIdProgComputadora.Enabled = False
-        Me.TxtIdProgComputadora.Location = New System.Drawing.Point(200, 69)
-        Me.TxtIdProgComputadora.Name = "TxtIdProgComputadora"
-        Me.TxtIdProgComputadora.Size = New System.Drawing.Size(296, 20)
-        Me.TxtIdProgComputadora.TabIndex = 84
+        Me.ChModelo.Text = "Modelo"
         '
-        'Label7
+        'ChMemoriaRam
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(74, 70)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(119, 16)
-        Me.Label7.TabIndex = 85
-        Me.Label7.Text = "Cod. Instalación"
+        Me.ChMemoriaRam.Text = "Cap. Memoria Ram"
+        Me.ChMemoriaRam.Width = 103
         '
-        'BtnCambiar
+        'ChDiscoDuro
         '
-        Me.BtnCambiar.Location = New System.Drawing.Point(521, 92)
-        Me.BtnCambiar.Name = "BtnCambiar"
-        Me.BtnCambiar.Size = New System.Drawing.Size(106, 38)
-        Me.BtnCambiar.TabIndex = 86
-        Me.BtnCambiar.Text = "Cambiar Computadora"
-        Me.BtnCambiar.UseVisualStyleBackColor = True
+        Me.ChDiscoDuro.Text = "Cap. Disco Duro"
+        Me.ChDiscoDuro.Width = 97
+        '
+        'ChTarjetaVideo
+        '
+        Me.ChTarjetaVideo.Text = "Tarjeta Video"
+        Me.ChTarjetaVideo.Width = 79
+        '
+        'ChCapacidad
+        '
+        Me.ChCapacidad.Text = "Capacidad"
+        Me.ChCapacidad.Width = 69
+        '
+        'ChUnidadOptica
+        '
+        Me.ChUnidadOptica.Text = "Unidad Optica"
+        Me.ChUnidadOptica.Width = 86
+        '
+        'ChDisponible
+        '
+        Me.ChDisponible.Text = "Disponible"
+        Me.ChDisponible.Width = 67
         '
         'FrmProgramasComputadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 602)
+        Me.Controls.Add(Me.TctrlProgramas)
         Me.Controls.Add(Me.BtnCambiar)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TxtIdProgComputadora)
-        Me.Controls.Add(Me.LsvProgramaComputadora)
         Me.Controls.Add(Me.PbxAgregar)
         Me.Controls.Add(Me.CboEmpleado)
         Me.Controls.Add(Me.CboComputadora)
@@ -363,6 +467,9 @@ Partial Class FrmProgramasComputadora
         Me.Panel1.PerformLayout()
         CType(Me.PbxAgregar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsProgComputadora.ResumeLayout(False)
+        Me.TctrlProgramas.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -385,7 +492,17 @@ Partial Class FrmProgramasComputadora
     Friend WithEvents CboComputadora As ComboBox
     Friend WithEvents CboEmpleado As ComboBox
     Friend WithEvents PbxAgregar As PictureBox
+    Friend WithEvents TxtIdProgComputadora As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents BtnCambiar As Button
+    Friend WithEvents CmsProgComputadora As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TctrlProgramas As TabControl
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents TabPage2 As TabPage
     Friend WithEvents LsvProgramaComputadora As ListView
+    Friend WithEvents ChCodProgComp As ColumnHeader
     Friend WithEvents ChIdPrograma As ColumnHeader
     Friend WithEvents ChNombrePrograma As ColumnHeader
     Friend WithEvents ChTipoPrograma As ColumnHeader
@@ -393,11 +510,14 @@ Partial Class FrmProgramasComputadora
     Friend WithEvents ChEmpleado As ColumnHeader
     Friend WithEvents ChFechaInstalacion As ColumnHeader
     Friend WithEvents ChFechaVencimiento As ColumnHeader
-    Friend WithEvents ChCodProgComp As ColumnHeader
-    Friend WithEvents TxtIdProgComputadora As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents BtnCambiar As Button
-    Friend WithEvents CmsProgComputadora As ContextMenuStrip
-    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LsvComputadoras As ListView
+    Friend WithEvents ChIdComputadora As ColumnHeader
+    Friend WithEvents ChMarca As ColumnHeader
+    Friend WithEvents ChModelo As ColumnHeader
+    Friend WithEvents ChMemoriaRam As ColumnHeader
+    Friend WithEvents ChDiscoDuro As ColumnHeader
+    Friend WithEvents ChTarjetaVideo As ColumnHeader
+    Friend WithEvents ChCapacidad As ColumnHeader
+    Friend WithEvents ChUnidadOptica As ColumnHeader
+    Friend WithEvents ChDisponible As ColumnHeader
 End Class
