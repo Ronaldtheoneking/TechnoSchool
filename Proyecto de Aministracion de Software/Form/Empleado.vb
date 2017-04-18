@@ -1,6 +1,8 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class FrmEmpleado
+    Dim Estado As Boolean
+
     Private Sub PbxAtras_Click(sender As Object, e As EventArgs) Handles PbxAtras.Click
         FrmPantallaPrincipal.Show()
         Me.Hide()
@@ -122,9 +124,14 @@ Public Class FrmEmpleado
     End Sub
 
     Private Sub PbxGuardar_Click(sender As Object, e As EventArgs) Handles PbxGuardar.Click
-        Call AgregarEmpleado()
-        Call CargarLsv()
-        Call Limpiar()
+        Call Validar()
+
+        If Estado = True Then
+            Call AgregarEmpleado()
+            Call CargarLsv()
+            Call Limpiar()
+        End If
+
     End Sub
 
     Private Sub Limpiar()
@@ -229,4 +236,15 @@ Public Class FrmEmpleado
 
         End If
     End Sub
+
+    Private Function Validar()
+        If TxtUsuario.Text = Nothing Or TxtContraseña.Text = Nothing Or TxtNombre.Text = Nothing Or TxtApellidos.Text = Nothing Or CboSexo.Text = Nothing Or TxtDireccion.Text = Nothing Then
+            MessageBox.Show("Solo Pueden quedar vacios el numero de telefono y el correo", "Tecno School", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Estado = False
+        Else
+            Estado = True
+        End If
+
+        Return Estado
+    End Function
 End Class

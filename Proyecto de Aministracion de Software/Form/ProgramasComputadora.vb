@@ -1,6 +1,8 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class FrmProgramasComputadora
+    Dim Estado As Boolean
+
     Private Sub PbxAtras_Click(sender As Object, e As EventArgs) Handles PbxAtras.Click
         FrmPantallaPrincipal.Show()
         Me.Hide()
@@ -227,9 +229,14 @@ Public Class FrmProgramasComputadora
     End Sub
 
     Private Sub PbxGuardar_Click(sender As Object, e As EventArgs) Handles PbxGuardar.Click
-        Call AgregarProgramaComputadora()
-        Call CargarLsv()
-        Call Limpiar()
+        Call Validar()
+
+        If Estado = True Then
+            Call AgregarProgramaComputadora()
+            Call CargarLsv()
+            Call Limpiar()
+        End If
+
     End Sub
 
     Private Sub Limpiar()
@@ -328,4 +335,15 @@ Public Class FrmProgramasComputadora
             cn.Close()
         End Try
     End Sub
+
+    Private Function Validar()
+        If CboComputadora.Text = Nothing Or CboEmpleado.Text = Nothing Or CboPrograma.Text = Nothing Then
+            MessageBox.Show("Seleccione todas las opciones para guardar cambios", "Tecno School", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Estado = False
+        Else
+            Estado = True
+        End If
+
+        Return Estado
+    End Function
 End Class

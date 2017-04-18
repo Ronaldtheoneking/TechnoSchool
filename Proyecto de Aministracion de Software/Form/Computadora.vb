@@ -1,6 +1,8 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class FrmComputadora
+    Dim Estado As Boolean
+
     Private Sub PbxAtras_Click(sender As Object, e As EventArgs) Handles PbxAtras.Click
         FrmPantallaPrincipal.Show()
         Me.Hide()
@@ -229,9 +231,14 @@ Public Class FrmComputadora
     End Sub
 
     Private Sub PbxGuardar_Click(sender As Object, e As EventArgs) Handles PbxGuardar.Click
-        Call AgregarComputadora()
-        Call CargarDgv()
-        Call Limpiar()
+        Call Validar()
+
+        If Estado = True Then
+            Call AgregarComputadora()
+            Call CargarDgv()
+            Call Limpiar()
+        End If
+
     End Sub
 
     Private Sub AgregarComputadora()
@@ -374,4 +381,16 @@ Public Class FrmComputadora
     Private Sub CboMarca_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles CboMarca.SelectionChangeCommitted
         Call CargarModelo()
     End Sub
+
+    Private Function Validar()
+
+        If CboMarca.Text = Nothing Or CboModelo.Text = Nothing Or CboMemoriaRam.Text = Nothing Or TxtDiscoDuro.Text = Nothing Or CboTarjetaVideo.Text = Nothing Or CboCapacidad.Text = Nothing Or CboTarjetaVideo.Text = Nothing Then
+            MessageBox.Show("Seleccione todas las opciones para guardar cambios", "Tecno School", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Estado = False
+        Else
+            Estado = True
+        End If
+
+        Return Estado
+    End Function
 End Class

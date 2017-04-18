@@ -49,16 +49,6 @@ Partial Class FrmProgramasComputadora
         Me.BtnCambiar = New System.Windows.Forms.Button()
         Me.TctrlProgramas = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.LsvProgramaComputadora = New System.Windows.Forms.ListView()
-        Me.ChCodProgComp = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChIdPrograma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChNombrePrograma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChTipoPrograma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChTipoLicencia = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChEmpleado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChFechaInstalacion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChFechaVencimiento = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.LsvComputadoras = New System.Windows.Forms.ListView()
         Me.ChIdComputadora = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChMarca = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -69,6 +59,16 @@ Partial Class FrmProgramasComputadora
         Me.ChCapacidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChUnidadOptica = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChDisponible = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.LsvProgramaComputadora = New System.Windows.Forms.ListView()
+        Me.ChCodProgComp = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChIdPrograma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChNombrePrograma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChTipoPrograma = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChTipoLicencia = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChEmpleado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChFechaInstalacion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChFechaVencimiento = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.PbxEditar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -312,71 +312,8 @@ Partial Class FrmProgramasComputadora
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(635, 174)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
+        Me.TabPage1.Text = "Detalle Computadora"
         Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.LsvProgramaComputadora)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(635, 174)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'LsvProgramaComputadora
-        '
-        Me.LsvProgramaComputadora.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChCodProgComp, Me.ChIdPrograma, Me.ChNombrePrograma, Me.ChTipoPrograma, Me.ChTipoLicencia, Me.ChEmpleado, Me.ChFechaInstalacion, Me.ChFechaVencimiento})
-        Me.LsvProgramaComputadora.ContextMenuStrip = Me.CmsProgComputadora
-        Me.LsvProgramaComputadora.GridLines = True
-        Me.LsvProgramaComputadora.Location = New System.Drawing.Point(-4, -8)
-        Me.LsvProgramaComputadora.Name = "LsvProgramaComputadora"
-        Me.LsvProgramaComputadora.Size = New System.Drawing.Size(643, 191)
-        Me.LsvProgramaComputadora.TabIndex = 85
-        Me.LsvProgramaComputadora.UseCompatibleStateImageBehavior = False
-        Me.LsvProgramaComputadora.View = System.Windows.Forms.View.Details
-        '
-        'ChCodProgComp
-        '
-        Me.ChCodProgComp.Text = "Cod. Instalacion"
-        Me.ChCodProgComp.Width = 90
-        '
-        'ChIdPrograma
-        '
-        Me.ChIdPrograma.Text = "Cod. Programa"
-        Me.ChIdPrograma.Width = 85
-        '
-        'ChNombrePrograma
-        '
-        Me.ChNombrePrograma.Text = "Nombre Programa"
-        Me.ChNombrePrograma.Width = 138
-        '
-        'ChTipoPrograma
-        '
-        Me.ChTipoPrograma.Text = "Tipo Programa"
-        Me.ChTipoPrograma.Width = 98
-        '
-        'ChTipoLicencia
-        '
-        Me.ChTipoLicencia.Text = "Tipo Licencia"
-        Me.ChTipoLicencia.Width = 85
-        '
-        'ChEmpleado
-        '
-        Me.ChEmpleado.Text = "Instalado Por"
-        Me.ChEmpleado.Width = 77
-        '
-        'ChFechaInstalacion
-        '
-        Me.ChFechaInstalacion.Text = "Fecha Instalación"
-        Me.ChFechaInstalacion.Width = 76
-        '
-        'ChFechaVencimiento
-        '
-        Me.ChFechaVencimiento.Text = "Vecha Vencimiento"
-        Me.ChFechaVencimiento.Width = 80
         '
         'LsvComputadoras
         '
@@ -432,6 +369,69 @@ Partial Class FrmProgramasComputadora
         '
         Me.ChDisponible.Text = "Disponible"
         Me.ChDisponible.Width = 67
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.LsvProgramaComputadora)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(635, 174)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Programas Instalados"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'LsvProgramaComputadora
+        '
+        Me.LsvProgramaComputadora.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChCodProgComp, Me.ChIdPrograma, Me.ChNombrePrograma, Me.ChTipoPrograma, Me.ChTipoLicencia, Me.ChEmpleado, Me.ChFechaInstalacion, Me.ChFechaVencimiento})
+        Me.LsvProgramaComputadora.ContextMenuStrip = Me.CmsProgComputadora
+        Me.LsvProgramaComputadora.GridLines = True
+        Me.LsvProgramaComputadora.Location = New System.Drawing.Point(-4, -8)
+        Me.LsvProgramaComputadora.Name = "LsvProgramaComputadora"
+        Me.LsvProgramaComputadora.Size = New System.Drawing.Size(643, 191)
+        Me.LsvProgramaComputadora.TabIndex = 85
+        Me.LsvProgramaComputadora.UseCompatibleStateImageBehavior = False
+        Me.LsvProgramaComputadora.View = System.Windows.Forms.View.Details
+        '
+        'ChCodProgComp
+        '
+        Me.ChCodProgComp.Text = "Cod. Instalacion"
+        Me.ChCodProgComp.Width = 90
+        '
+        'ChIdPrograma
+        '
+        Me.ChIdPrograma.Text = "Cod. Programa"
+        Me.ChIdPrograma.Width = 85
+        '
+        'ChNombrePrograma
+        '
+        Me.ChNombrePrograma.Text = "Nombre Programa"
+        Me.ChNombrePrograma.Width = 138
+        '
+        'ChTipoPrograma
+        '
+        Me.ChTipoPrograma.Text = "Tipo Programa"
+        Me.ChTipoPrograma.Width = 98
+        '
+        'ChTipoLicencia
+        '
+        Me.ChTipoLicencia.Text = "Tipo Licencia"
+        Me.ChTipoLicencia.Width = 85
+        '
+        'ChEmpleado
+        '
+        Me.ChEmpleado.Text = "Instalado Por"
+        Me.ChEmpleado.Width = 77
+        '
+        'ChFechaInstalacion
+        '
+        Me.ChFechaInstalacion.Text = "Fecha Instalación"
+        Me.ChFechaInstalacion.Width = 76
+        '
+        'ChFechaVencimiento
+        '
+        Me.ChFechaVencimiento.Text = "Vecha Vencimiento"
+        Me.ChFechaVencimiento.Width = 80
         '
         'FrmProgramasComputadora
         '
