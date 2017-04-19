@@ -346,4 +346,5 @@ Public Class FrmProgramasComputadora
 
         Return Estado
     End Function
+
 End Class

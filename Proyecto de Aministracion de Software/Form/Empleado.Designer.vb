@@ -62,6 +62,9 @@ Partial Class FrmEmpleado
         Me.TxtIdEmpleado = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.PbxAgregar = New System.Windows.Forms.PictureBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TxtBusqueda = New System.Windows.Forms.TextBox()
+        Me.BtnMostrarTodo = New System.Windows.Forms.Button()
         CType(Me.PbxEditar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -288,9 +291,9 @@ Partial Class FrmEmpleado
         '
         Me.LsvEmpleados.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdEmpleado, Me.ChNombres, Me.ChApellidos, Me.ChUsuario, Me.ChContraseña, Me.ChSexo, Me.ChDireccion, Me.ChTelefono, Me.ChCorreo})
         Me.LsvEmpleados.ContextMenuStrip = Me.CmsEmpleado
-        Me.LsvEmpleados.Location = New System.Drawing.Point(6, 311)
+        Me.LsvEmpleados.Location = New System.Drawing.Point(6, 355)
         Me.LsvEmpleados.Name = "LsvEmpleados"
-        Me.LsvEmpleados.Size = New System.Drawing.Size(643, 200)
+        Me.LsvEmpleados.Size = New System.Drawing.Size(643, 156)
         Me.LsvEmpleados.TabIndex = 63
         Me.LsvEmpleados.UseCompatibleStateImageBehavior = False
         Me.LsvEmpleados.View = System.Windows.Forms.View.Details
@@ -384,11 +387,41 @@ Partial Class FrmEmpleado
         Me.PbxAgregar.TabIndex = 66
         Me.PbxAgregar.TabStop = False
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(55, 321)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(131, 16)
+        Me.Label11.TabIndex = 75
+        Me.Label11.Text = "Buscar Empleado"
+        '
+        'TxtBusqueda
+        '
+        Me.TxtBusqueda.Location = New System.Drawing.Point(209, 320)
+        Me.TxtBusqueda.Name = "TxtBusqueda"
+        Me.TxtBusqueda.Size = New System.Drawing.Size(253, 20)
+        Me.TxtBusqueda.TabIndex = 74
+        '
+        'BtnMostrarTodo
+        '
+        Me.BtnMostrarTodo.Location = New System.Drawing.Point(510, 313)
+        Me.BtnMostrarTodo.Name = "BtnMostrarTodo"
+        Me.BtnMostrarTodo.Size = New System.Drawing.Size(108, 32)
+        Me.BtnMostrarTodo.TabIndex = 76
+        Me.BtnMostrarTodo.Text = "Mostrar Todo"
+        Me.BtnMostrarTodo.UseVisualStyleBackColor = True
+        '
         'FrmEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 602)
+        Me.Controls.Add(Me.BtnMostrarTodo)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.TxtBusqueda)
         Me.Controls.Add(Me.PbxAgregar)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.TxtIdEmpleado)
@@ -466,4 +499,7 @@ Partial Class FrmEmpleado
     Friend WithEvents CmsEmpleado As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label11 As Label
+    Friend WithEvents TxtBusqueda As TextBox
+    Friend WithEvents BtnMostrarTodo As Button
 End Class

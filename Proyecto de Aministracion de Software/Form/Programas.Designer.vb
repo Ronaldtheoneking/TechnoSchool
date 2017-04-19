@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmProgramas
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmProgramas
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProgramas))
@@ -47,6 +47,9 @@ Partial Class FrmProgramas
         Me.PbxAgregar = New System.Windows.Forms.PictureBox()
         Me.TxtIdPrograma = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.TxtBusqueda = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.BtnMostrarTodo = New System.Windows.Forms.Button()
         CType(Me.PbxEditar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -120,7 +123,7 @@ Partial Class FrmProgramas
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(99, 179)
+        Me.Label2.Location = New System.Drawing.Point(99, 150)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(134, 16)
@@ -129,7 +132,7 @@ Partial Class FrmProgramas
         '
         'TxtNombrePrograma
         '
-        Me.TxtNombrePrograma.Location = New System.Drawing.Point(259, 121)
+        Me.TxtNombrePrograma.Location = New System.Drawing.Point(259, 109)
         Me.TxtNombrePrograma.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombrePrograma.Name = "TxtNombrePrograma"
         Me.TxtNombrePrograma.Size = New System.Drawing.Size(253, 20)
@@ -139,7 +142,7 @@ Partial Class FrmProgramas
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(72, 122)
+        Me.Label1.Location = New System.Drawing.Point(72, 110)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(161, 16)
@@ -149,7 +152,7 @@ Partial Class FrmProgramas
         'CboTipoLicencia
         '
         Me.CboTipoLicencia.FormattingEnabled = True
-        Me.CboTipoLicencia.Location = New System.Drawing.Point(259, 238)
+        Me.CboTipoLicencia.Location = New System.Drawing.Point(259, 192)
         Me.CboTipoLicencia.Name = "CboTipoLicencia"
         Me.CboTipoLicencia.Size = New System.Drawing.Size(253, 21)
         Me.CboTipoLicencia.TabIndex = 64
@@ -158,7 +161,7 @@ Partial Class FrmProgramas
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(105, 239)
+        Me.Label6.Location = New System.Drawing.Point(105, 193)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(128, 16)
@@ -168,7 +171,7 @@ Partial Class FrmProgramas
         'CboTipoPrograma
         '
         Me.CboTipoPrograma.FormattingEnabled = True
-        Me.CboTipoPrograma.Location = New System.Drawing.Point(259, 178)
+        Me.CboTipoPrograma.Location = New System.Drawing.Point(259, 149)
         Me.CboTipoPrograma.Name = "CboTipoPrograma"
         Me.CboTipoPrograma.Size = New System.Drawing.Size(253, 21)
         Me.CboTipoPrograma.TabIndex = 65
@@ -254,11 +257,41 @@ Partial Class FrmProgramas
         Me.Label3.TabIndex = 69
         Me.Label3.Text = "Código del Programa"
         '
+        'TxtBusqueda
+        '
+        Me.TxtBusqueda.Location = New System.Drawing.Point(259, 235)
+        Me.TxtBusqueda.Name = "TxtBusqueda"
+        Me.TxtBusqueda.Size = New System.Drawing.Size(253, 20)
+        Me.TxtBusqueda.TabIndex = 70
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(105, 236)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(128, 16)
+        Me.Label4.TabIndex = 71
+        Me.Label4.Text = "Buscar Programa"
+        '
+        'BtnMostrarTodo
+        '
+        Me.BtnMostrarTodo.Location = New System.Drawing.Point(535, 228)
+        Me.BtnMostrarTodo.Name = "BtnMostrarTodo"
+        Me.BtnMostrarTodo.Size = New System.Drawing.Size(108, 32)
+        Me.BtnMostrarTodo.TabIndex = 77
+        Me.BtnMostrarTodo.Text = "Mostrar Todo"
+        Me.BtnMostrarTodo.UseVisualStyleBackColor = True
+        '
         'FrmProgramas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 602)
+        Me.Controls.Add(Me.BtnMostrarTodo)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.TxtBusqueda)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TxtIdPrograma)
         Me.Controls.Add(Me.PbxAgregar)
@@ -311,4 +344,7 @@ Partial Class FrmProgramas
     Friend WithEvents CmsProgramas As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TxtBusqueda As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents BtnMostrarTodo As Button
 End Class

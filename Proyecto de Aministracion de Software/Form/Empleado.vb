@@ -247,4 +247,56 @@ Public Class FrmEmpleado
 
         Return Estado
     End Function
+
+    Private Sub BuscarEmpleado()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
+        Using cmd As New SqlCommand
+
+            Try
+                cn.Open()
+
+                With cmd
+                    .CommandText = "Sp_BuscarEmpleado"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = cn
+                    .Parameters.Add("@IdEmpleado", SqlDbType.Int).Value = CInt(TxtBusqueda.Text)
+
+                End With
+
+                Dim MostrarEmpleados As SqlDataReader
+                MostrarEmpleados = cmd.ExecuteReader
+                LsvEmpleados.Items.Clear()
+
+                While MostrarEmpleados.Read = True
+                    With LsvEmpleados.Items.Add(MostrarEmpleados("IdEmpleado").ToString)
+                        .SubItems.Add(MostrarEmpleados("Nombres").ToString)
+                        .SubItems.Add(MostrarEmpleados("Apellidos").ToString)
+                        .SubItems.Add(MostrarEmpleados("NombreUsuario").ToString)
+                        .SubItems.Add(MostrarEmpleados("Contraseña").ToString)
+                        .SubItems.Add(MostrarEmpleados("Sexo").ToString)
+                        .SubItems.Add(MostrarEmpleados("Direccion").ToString)
+                        .SubItems.Add(MostrarEmpleados("Telefono").ToString)
+                        .SubItems.Add(MostrarEmpleados("Correo").ToString)
+
+
+                    End With
+                End While
+
+            Catch ex As Exception
+            Finally
+                cn.Close()
+            End Try
+        End Using
+    End Sub
+
+    Private Sub TxtBusqueda_TextChanged(sender As Object, e As EventArgs) Handles TxtBusqueda.TextChanged
+        Call BuscarEmpleado()
+    End Sub
+
+    Private Sub BtnMostrarTodo_Click(sender As Object, e As EventArgs) Handles BtnMostrarTodo.Click
+        Call CargarLsv()
+    End Sub
 End Class

@@ -61,6 +61,9 @@ Partial Class FrmComputadora
         Me.ChDisponible = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TxtNumComputadora = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TxtBusqueda = New System.Windows.Forms.TextBox()
+        Me.BtnMostrarTodo = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PbxEditar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -134,7 +137,7 @@ Partial Class FrmComputadora
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(98, 164)
+        Me.Label1.Location = New System.Drawing.Point(98, 152)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 20)
         Me.Label1.TabIndex = 35
@@ -144,7 +147,7 @@ Partial Class FrmComputadora
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(9, 219)
+        Me.Label2.Location = New System.Drawing.Point(9, 194)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(161, 20)
         Me.Label2.TabIndex = 36
@@ -154,7 +157,7 @@ Partial Class FrmComputadora
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(67, 273)
+        Me.Label3.Location = New System.Drawing.Point(67, 242)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(98, 20)
         Me.Label3.TabIndex = 37
@@ -174,7 +177,7 @@ Partial Class FrmComputadora
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(353, 220)
+        Me.Label6.Location = New System.Drawing.Point(353, 194)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(123, 20)
         Me.Label6.TabIndex = 39
@@ -182,7 +185,7 @@ Partial Class FrmComputadora
         '
         'TxtDiscoDuro
         '
-        Me.TxtDiscoDuro.Location = New System.Drawing.Point(176, 275)
+        Me.TxtDiscoDuro.Location = New System.Drawing.Point(176, 244)
         Me.TxtDiscoDuro.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtDiscoDuro.Name = "TxtDiscoDuro"
         Me.TxtDiscoDuro.Size = New System.Drawing.Size(153, 20)
@@ -192,7 +195,7 @@ Partial Class FrmComputadora
         '
         Me.ChkDisponible.AutoSize = True
         Me.ChkDisponible.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkDisponible.Location = New System.Drawing.Point(482, 274)
+        Me.ChkDisponible.Location = New System.Drawing.Point(482, 241)
         Me.ChkDisponible.Name = "ChkDisponible"
         Me.ChkDisponible.Size = New System.Drawing.Size(112, 24)
         Me.ChkDisponible.TabIndex = 44
@@ -202,7 +205,7 @@ Partial Class FrmComputadora
         'CboModelo
         '
         Me.CboModelo.FormattingEnabled = True
-        Me.CboModelo.Location = New System.Drawing.Point(176, 166)
+        Me.CboModelo.Location = New System.Drawing.Point(176, 154)
         Me.CboModelo.Name = "CboModelo"
         Me.CboModelo.Size = New System.Drawing.Size(153, 21)
         Me.CboModelo.TabIndex = 45
@@ -210,7 +213,7 @@ Partial Class FrmComputadora
         'CboMemoriaRam
         '
         Me.CboMemoriaRam.FormattingEnabled = True
-        Me.CboMemoriaRam.Location = New System.Drawing.Point(176, 221)
+        Me.CboMemoriaRam.Location = New System.Drawing.Point(176, 196)
         Me.CboMemoriaRam.Name = "CboMemoriaRam"
         Me.CboMemoriaRam.Size = New System.Drawing.Size(153, 21)
         Me.CboMemoriaRam.TabIndex = 46
@@ -226,7 +229,7 @@ Partial Class FrmComputadora
         'CboUnidadOptica
         '
         Me.CboUnidadOptica.FormattingEnabled = True
-        Me.CboUnidadOptica.Location = New System.Drawing.Point(482, 222)
+        Me.CboUnidadOptica.Location = New System.Drawing.Point(482, 196)
         Me.CboUnidadOptica.Name = "CboUnidadOptica"
         Me.CboUnidadOptica.Size = New System.Drawing.Size(153, 21)
         Me.CboUnidadOptica.TabIndex = 48
@@ -235,7 +238,7 @@ Partial Class FrmComputadora
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(382, 166)
+        Me.Label7.Location = New System.Drawing.Point(382, 151)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(94, 20)
         Me.Label7.TabIndex = 51
@@ -273,7 +276,7 @@ Partial Class FrmComputadora
         'CboCapacidad
         '
         Me.CboCapacidad.FormattingEnabled = True
-        Me.CboCapacidad.Location = New System.Drawing.Point(482, 168)
+        Me.CboCapacidad.Location = New System.Drawing.Point(482, 153)
         Me.CboCapacidad.Name = "CboCapacidad"
         Me.CboCapacidad.Size = New System.Drawing.Size(153, 21)
         Me.CboCapacidad.TabIndex = 55
@@ -371,11 +374,41 @@ Partial Class FrmComputadora
         Me.Label9.TabIndex = 58
         Me.Label9.Text = "Num. Computadora"
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(22, 278)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(153, 16)
+        Me.Label10.TabIndex = 73
+        Me.Label10.Text = "Buscar Computadora"
+        '
+        'TxtBusqueda
+        '
+        Me.TxtBusqueda.Location = New System.Drawing.Point(176, 277)
+        Me.TxtBusqueda.Name = "TxtBusqueda"
+        Me.TxtBusqueda.Size = New System.Drawing.Size(253, 20)
+        Me.TxtBusqueda.TabIndex = 72
+        '
+        'BtnMostrarTodo
+        '
+        Me.BtnMostrarTodo.Location = New System.Drawing.Point(482, 270)
+        Me.BtnMostrarTodo.Name = "BtnMostrarTodo"
+        Me.BtnMostrarTodo.Size = New System.Drawing.Size(108, 32)
+        Me.BtnMostrarTodo.TabIndex = 77
+        Me.BtnMostrarTodo.Text = "Mostrar Todo"
+        Me.BtnMostrarTodo.UseVisualStyleBackColor = True
+        '
         'FrmComputadora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 602)
+        Me.Controls.Add(Me.BtnMostrarTodo)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.TxtBusqueda)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.TxtNumComputadora)
         Me.Controls.Add(Me.LsvComputadoras)
@@ -451,4 +484,7 @@ Partial Class FrmComputadora
     Friend WithEvents ChDisponible As ColumnHeader
     Friend WithEvents TxtNumComputadora As TextBox
     Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents TxtBusqueda As TextBox
+    Friend WithEvents BtnMostrarTodo As Button
 End Class

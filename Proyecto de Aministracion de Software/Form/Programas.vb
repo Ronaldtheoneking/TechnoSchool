@@ -249,4 +249,51 @@ Public Class FrmProgramas
 
         Return Estado
     End Function
+
+    Public Sub BuscarPrograma()
+
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
+        Using cmd As New SqlCommand
+            Try
+                cn.Open()
+                With cmd
+                    .CommandText = "Sp_BuscarPrograma"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = cn
+                    .Parameters.Add("@IdPrograma", SqlDbType.Int).Value = CInt(TxtBusqueda.Text)
+                End With
+
+                Dim MostrarPrograma As SqlDataReader
+                MostrarPrograma = cmd.ExecuteReader()
+                LsvProgramas.Items.Clear()
+
+                While MostrarPrograma.Read = True
+                    With LsvProgramas.Items.Add(MostrarPrograma("IdPrograma").ToString)
+                        .SubItems.Add(MostrarPrograma("NombrePrograma").ToString)
+                        .SubItems.Add(MostrarPrograma("TipoPrograma").ToString)
+                        .SubItems.Add(MostrarPrograma("TipoLicencia").ToString)
+
+                    End With
+
+                End While
+            Catch ex As Exception
+            Finally
+                cn.Close()
+
+
+            End Try
+        End Using
+    End Sub
+
+
+    Private Sub TxtBusqueda_TextChanged(sender As Object, e As EventArgs) Handles TxtBusqueda.TextChanged
+        Call BuscarPrograma()
+    End Sub
+
+    Private Sub BtnMostrarTodo_Click(sender As Object, e As EventArgs) Handles BtnMostrarTodo.Click
+        Call CargarLsv()
+    End Sub
 End Class

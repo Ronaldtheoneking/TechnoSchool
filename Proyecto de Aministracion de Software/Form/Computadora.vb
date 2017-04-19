@@ -393,4 +393,56 @@ Public Class FrmComputadora
 
         Return Estado
     End Function
+
+    Private Sub BuscarComputadora()
+        If cn.State = ConnectionState.Open Then
+            cn.Close()
+        End If
+
+        Using cmd As New SqlCommand
+
+            Try
+                cn.Open()
+
+                With cmd
+                    .CommandText = "Sp_BuscarComputadora"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = cn
+                    .Parameters.Add("@IdComputadora", SqlDbType.Int).Value = CInt(TxtBusqueda.Text)
+
+                End With
+
+                Dim MostrarComputadoras As SqlDataReader
+                MostrarComputadoras = cmd.ExecuteReader
+                LsvComputadoras.Items.Clear()
+
+                While MostrarComputadoras.Read = True
+                    With LsvComputadoras.Items.Add(MostrarComputadoras("IdComputadora").ToString)
+                        .SubItems.Add(MostrarComputadoras("Marca").ToString)
+                        .SubItems.Add(MostrarComputadoras("Modelo").ToString)
+                        .SubItems.Add(MostrarComputadoras("CapacidadMemoria").ToString)
+                        .SubItems.Add(MostrarComputadoras("CapDiscoDuro").ToString)
+                        .SubItems.Add(MostrarComputadoras("TarjetaVideo").ToString)
+                        .SubItems.Add(MostrarComputadoras("Capacidad").ToString)
+                        .SubItems.Add(MostrarComputadoras("UnidadOptica").ToString)
+                        .SubItems.Add(MostrarComputadoras("Disponible").ToString)
+
+
+                    End With
+                End While
+
+            Catch ex As Exception
+            Finally
+                cn.Close()
+            End Try
+        End Using
+    End Sub
+
+    Private Sub TxtBusqueda_TextChanged(sender As Object, e As EventArgs) Handles TxtBusqueda.TextChanged
+        Call BuscarComputadora()
+    End Sub
+
+    Private Sub BtnMostrarTodo_Click(sender As Object, e As EventArgs) Handles BtnMostrarTodo.Click
+        Call CargarDgv()
+    End Sub
 End Class
